@@ -1,0 +1,46 @@
+footer {
+    background-color: var(--shade-5);
+}
+
+.app-icon img {
+    height: 60px;
+}
+
+.links {
+    h5 {
+        color: var(--white);
+        font-weight: var(--600);
+        margin-bottom: 24px;
+    }
+
+    a {
+        color: var(--white);
+        font-weight: var(--400);
+        opacity: 0.6;
+        font-size: 16px;
+    }
+}
+
+.sub-footer {
+    border-top: var(--shade-4) 1px solid;
+    margin-top: 24px;
+    .social-media{
+        display: flex;
+        gap: 8px;
+        a{
+            display: flex;
+            width: 48px;
+            height: 48px;
+            border-radius: 160px;
+            background-color: var(--shade-1);
+            justify-content: center;
+            align-items: center;
+            color: var(--shade-5);
+            font-size: 24px;
+             transition: all 0.3s ease-out;
+            &:hover{
+                opacity: 0.5;
+            }
+        }
+    }
+}

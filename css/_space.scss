@@ -1,0 +1,25 @@
+.padding-top {
+    padding-top: 24px;
+}
+
+.padding-bottom {
+    padding-bottom: 24px;
+}
+
+.container-xl{
+    padding: 0px 24px;
+}
+
+@media (min-width: 992px) {
+    .padding-top {
+        padding-top: 120px;
+    }
+
+    .padding-bottom {
+        padding-bottom: 120px;
+    }
+}
+
+.container-xxl {
+    padding: 0px 24px;
+}

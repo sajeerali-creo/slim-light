@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blite</title>
+    <!-- main framework css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- iconfont -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <!-- main font -->
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+    <!-- main style -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+
+<body>
+    <header class="main-header d-flex align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="/" class="d-flex align-items-center">
+                <img src="img/logo.svg" class="logo" alt="">
+            </a>
+            <div class="d-none d-lg-block">
+                <div class="d-flex gap-5 menus align-items-center">
+                    <a href="meal_plans.html">Meal Plans</a>
+                    <a href="our_services.html">Our Services</a>
+                    <a href="about_us.html">About Us</a>
+                    <a href="contact_us.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="d-none d-lg-block">
+                <div class="d-flex align-items-center gap-2">
+                    <a href="login.html" class="btn-second">Login</a>
+                    <a href="sign-up.html" class="btn-first">Sign Up</a>
+                </div>
+            </div>
+            <div class="d-lg-none">
+                <a href="#" class="btn-menu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+                        class="ti ti-menu-4"></i></a>
+            </div>
+        </div>
+
+        <!-- offcanvas -->
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-body">
+                <div class="d-flex flex-column gap-4 justify-content-between h-100">
+                    <div class="d-flex gap-4 flex-column">
+                        <div class="user-card">
+                            <div class="user-avtar">
+                                <!-- <img src="img/avatar.webp" alt=""> -->
+                                <i class="ti ti-user"></i>
+                            </div>
+                            <strong class="text-white mt-2 d-flex">Thomas Miller</strong>
+                        </div>
+                        <div class="d-flex flex-column gap-5 menus p-4">
+                            <a href="meal_plans.html">Meal Plans</a>
+                            <a href="our_services.html">Our Services</a>
+                            <a href="about_us.html">About Us</a>
+                            <a href="contact_us.html">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column gap-2 p-4">
+                        <a href="login.html" class="btn-second w-100">Login</a>
+                        <a href="sign-up.html" class="btn-first w-100">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="whatsap">
+            <a href="https://wa.me/+971503123013" target="_blank" class="pulse"><i class="ti ti-brand-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <!-- ===========BANNER=========== -->
+    <section class="inner-banner">
+    </section>
+
+    <!-- ===========SUBHEADER=========== -->
+    <section class="py-5 bg-inner-sub-head">
+        <div class="container">
+            <div class="d-flex flex-column flex-lg-row justify-content-between">
+                <div class="d-flex flex-column align-items-start">
+                    <h4 class="h2">Frequently Asked Questions</h4>
+                </div>
+                <div>
+                    <div class="bredcums">
+                        <a href="/">Home</a>/ Frequently Asked Questions
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===========SIGNATURE DISH=========== -->
+    <section class="padding-bottom padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq1" class="faq-toggle">
+                            <label for="faq1" class="faq-question">
+                                How can we subscribe to the Sim’n Lite program ?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                It is very easy! Call us at 800-GETSLIM (800-4387546), book your appointment virtually
+                                or in person with our dietitian, or simply choose your program online and subscribe via
+                                our website
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq2" class="faq-toggle">
+                            <label for="faq2" class="faq-question">
+                                Who can benefit from Slim’n Lite meal plan?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                Anyone looking to eat healthy, lose weight, gain weight, control a medical condition
+                                (i.e. diabetes, cardiovascular disease, hypertension, PCOs, thyroid disorder) and food
+                                allergies, new mums and lactating mums. We have lots of options for you!
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq3" class="faq-toggle">
+                            <label for="faq3" class="faq-question">
+                                How often should I follow up with my dietitian ?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                We recommend to follow up with your dietitian every 2 weeks. This will help us to do the
+                                necessary changes when needed to achieve your health and fitness goals.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq4" class="faq-toggle">
+                            <label for="faq4" class="faq-question">
+                                What are the targeted age groups ?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                We target all age groups starting from 8 years old. Children below 8 years can subscribe
+                                to our program given there is a doctor’s consent
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq5" class="faq-toggle">
+                            <label for="faq5" class="faq-question">
+                                Where do you deliver your meals ?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                We deliver to Abu Dhabi, Al Ain, Dubai, Sharjah, Ajman, Ras Al Khaimah, and Fujairah.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq6" class="faq-toggle">
+                            <label for="faq6" class="faq-question">
+                                What should I do when I receive my meals ?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                It is always preferable to remove the food from the bag or box and place all items in
+                                the fridge immediately. If you are away from home, the food will remain safe in your
+                                cooler bag at room temperature (not in the external heat) for up to a maximum of 3
+                                hours, with ice packs. If you choose to receive your meals in a carton box, food should
+                                be transferred immediately to the refrigerator.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq7" class="faq-toggle">
+                            <label for="faq7" class="faq-question">
+                                How should I heat up my meals and for how long ?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                Food should be removed from the fridge and heated either on a pan, oven, sandwich grill
+                                or microwave. Lunch and soups containers are microwavable while other containers have to
+                                be emptied in another microwaveable container for reheating.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq8" class="faq-toggle">
+                            <label for="faq8" class="faq-question">
+                                What kinds of food do you usually serve ?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                We serve a wide variety of foods from different cuisines: Arabic, Mexican, Italian,
+                                French, Indian, etc. to satisfy the varying tastes of our clients.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq9" class="faq-toggle">
+                            <label for="faq9" class="faq-question">
+                                Can I choose my menu or do you do that for me ?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                We have a 10-week cycle menu, you can pick your own menu or request your dietitian to do
+                                it for you. It features 2 choices for each meal and you are free to choose from it
+                                according to your preference. However, the dietitian can interfere or change your meal
+                                choice in case you have a medical condition that requires strict control of certain food
+                                items.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq10" class="faq-toggle">
+                            <label for="faq10" class="faq-question">
+                                Do I have an alternative choice if I don’t like the options provided on the menu ?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                With Slim’n Lite meal plan, you always have up to 10 choices per meal to choose from.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq11" class="faq-toggle">
+                            <label for="faq11" class="faq-question">
+                                I am a vegetarian, is there any meal plan that is suitable for me ?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                Our menu offers a daily vegetarian meal option.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq12" class="faq-toggle">
+                            <label for="faq12" class="faq-question">
+                                What is the average weight loss in Slim’n Lite ?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                You can lose up to 5 kg per month taking into consideration your full commitment to the
+                                meal plan. However, this range can be more or less depending on your metabolism,
+                                physical activity and health condition.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq13" class="faq-toggle">
+                            <label for="faq13" class="faq-question">
+                                What happens if I stop losing weight, even though I’m still committed to the diet ?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                This phenomenon 'The Plateau' is common among dieters and this usually happens after
+                                you’ve been dieting for a long time. In such a case, your dietitian will try various
+                                methods to get you back on track. This is why we encourage the follow ups with your
+                                dietitian.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq14" class="faq-toggle">
+                            <label for="faq14" class="faq-question">
+                                What if I have an emergency or a sudden travel, and I need to freeze my meals ?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                You are free to adjust your plan as you wish according to your schedule. To stop or
+                                restart your boxes please contact us by phone or email at least 48 hours (2 working
+                                days) in advance.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq15" class="faq-toggle">
+                            <label for="faq15" class="faq-question">
+                                Is there a refund in case I don’t want to continue the program?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                We have a no refund policy. However, if you don’t wish to continue, you can transfer
+                                your remaining boxes to any friend of family member.
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <input type="checkbox" id="faq16" class="faq-toggle">
+                            <label for="faq16" class="faq-question">
+                                What are your working hours ?
+                                <span class="arrow"></span>
+                            </label>
+                            <div class="faq-answer">
+                                Our offices are open Sunday to Friday from 9:00 am to 5:00 pm
+                            </div>
+                        </div>
+
+                        <!-- Add more items as needed -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========FOOTER=========== -->
+    <footer class="padding-top">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="mb-5">
+                        <img src="img/logo.svg" alt="">
+                    </div>
+                    <p class="text-white">We don’t just offer meals, we help shape lifestyles. Connect with us!</p>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="tel:800-4387546" class="d-flex gap-2 align-items-center text-white"><i
+                                class="ti ti-phone color-shade-2"></i><span>800-4387546</span></a>
+                        <a href="mailto:dubai@slimandlite.ae" class="d-flex gap-2 align-items-center text-white"><i
+                                class="ti ti-mail color-shade-2"></i><span>dubai@slimandlite.ae</span></a>
+                    </div>
+                    <div class="d-flex gap-2 app-icon mt-5">
+                        <a href="#">
+                            <img src="img/appstore.webp" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/googleplay.webp" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row links">
+                        <div class="col-lg-4  mb-5 mb-lg-0">
+                            <h5>Quicklinks</h5>
+                            <div class="d-flex flex-column gap-3">
+                                <a href="/">Home</a>
+                                <a href="about_us.html">About Us</a>
+                                <a href="contact_us.html">Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  mb-5 mb-lg-0">
+                            <h5>Meal Plans</h5>
+                            <div class="d-flex flex-column gap-3">
+                                <a href="#">Getslim</a>
+                                <a href="#">Bulk Up</a>
+                                <a href="#">Keto</a>
+                                <a href="#">Vegan</a>
+                                <a href="#">Med-Lite</a>
+                                <a href="#">Healthymumz</a>
+                                <a href="#">Lil Tots</a>
+                                <a href="#">Befit</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <h5>Learn More</h5>
+                            <div class="d-flex flex-column gap-3">
+                                <a href="faq.html">FAQ</a>
+                                <a href="blog.html">Blogs</a>
+                                <a href="terms-condition.html">Terms & Conditions</a>
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-footer py-4">
+            <div class="d-flex align-items-center container flex-column flex-lg-row gap-3 gap-lg-0">
+                <div class="col-lg-6 text-white">
+                    © 2025 Slim’n Lite. All Rights Reserved.
+                </div>
+                <div class="col-lg-6 d-flex justify-content-end">
+                    <div class="social-media gap-2">
+                        <a href="#"><i class="ti ti-brand-facebook"></i></a>
+                        <a href="#"><i class="ti ti-brand-x"></i></a>
+                        <a href="#"><i class="ti ti-brand-instagram"></i></a>
+                        <a href="#"><i class="ti ti-brand-linkedin"></i></a>
+                        <a href="#"><i class="ti ti-brand-youtube"></i></a>
+                        <a href="#"><i class="ti ti-brand-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

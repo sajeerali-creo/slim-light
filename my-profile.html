@@ -1,0 +1,1122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blite</title>
+    <!-- main framework css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- iconfont -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <!-- main font -->
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+    <!-- main style -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+
+<body>
+    <header class="main-header d-flex align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="/" class="d-flex align-items-center">
+                <img src="img/logo.svg" class="logo" alt="">
+            </a>
+            <div class="d-none d-lg-block">
+                <div class="d-flex gap-5 menus align-items-center">
+                    <a href="meal_plans.html">Meal Plans</a>
+                    <a href="our_services.html">Our Services</a>
+                    <a href="about_us.html">About Us</a>
+                    <a href="contact_us.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="d-none d-lg-block">
+                <div class="d-flex align-items-center gap-2">
+                    <span class="text-white">Thomas Miller</span>
+                    <div class="user-head">
+                        <img src="img/avatar.webp" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="d-lg-none">
+                <a href="#" class="btn-menu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+                        class="ti ti-menu-4"></i></a>
+            </div>
+        </div>
+
+        <!-- offcanvas -->
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-body">
+                <div class="d-flex flex-column gap-4 justify-content-between h-100">
+                    <div class="d-flex gap-4 flex-column">
+                        <div class="user-card">
+                            <div class="user-avtar">
+                                <img src="img/avatar.webp" alt="">
+                                <!-- <i class="ti ti-user"></i> -->
+                            </div>
+                            <strong class="text-white mt-2 d-flex">Thomas Miller</strong>
+                        </div>
+                        <div class="d-flex flex-column gap-5 menus p-4">
+                            <a href="meal_plans.html">Meal Plans</a>
+                            <a href="our_services.html">Our Services</a>
+                            <a href="about_us.html">About Us</a>
+                            <a href="contact_us.html">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column gap-2 p-4">
+                        <a href="login.html" class="btn-second w-100">Login</a>
+                        <a href="sign-up.html" class="btn-first w-100">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="whatsap">
+            <a href="https://wa.me/+971503123013" target="_blank" class="pulse"><i class="ti ti-brand-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <!-- ===========BANNER=========== -->
+    <section class="inner-banner">
+    </section>
+
+    <!-- ===========SUBHEADER=========== -->
+    <section class="py-5 bg-inner-sub-head">
+        <div class="container">
+            <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
+                <div class="d-flex flex-column align-items-start">
+                    <div class="d-flex gap-4 align-items-center ">
+                        <div class="user-profile mb-4 mb-lg-0">
+                            <img src="img/avatar.webp" alt="">
+                        </div>
+                        <div class="user-details-area d-flex flex-column gap-2">
+                            <h5 class="text-brand">Thomas Miller</h5>
+                            <span>Abu Dhabi, United Arab Emirates </span>
+                            <span>sajeer.ali09@gmail.com</span>
+                            <span>+971 55 377 6176</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="settings.html" class="btn-first w-auto px-4 gap-2"><i class="ti ti-settings"></i>Account
+                        Settings</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========TABS=========== -->
+    <section class="padding-top padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="main-tab-page">
+                        <!-- tab menus -->
+                        <div class="tab-wrapper">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="my-package-tab" data-bs-toggle="tab"
+                                        data-bs-target="#my-package-tab-pane" type="button" role="tab"
+                                        aria-controls="my-package-tab-pane" aria-selected="true"><i
+                                            class="ti ti-list-details"></i>&nbsp;My Package</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="menu-selection-tab" data-bs-toggle="tab"
+                                        data-bs-target="#menu-selection-tab-pane" type="button" role="tab"
+                                        aria-controls="menu-selection-tab-pane" aria-selected="false"><i
+                                            class="ti ti-menu-3"></i>&nbsp;Menu Selection</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="my-health-profile-tab" data-bs-toggle="tab"
+                                        data-bs-target="#my-health-profile-tab-pane" type="button" role="tab"
+                                        aria-controls="my-health-profile-tab-pane" aria-selected="false"><i
+                                            class="ti ti-brand-google-fit"></i>&nbsp;My Health Profile</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="my-appointments-tab" data-bs-toggle="tab"
+                                        data-bs-target="#my-appointments-tab-pane" type="button" role="tab"
+                                        aria-controls="my-appointments-tab-pane" aria-selected="false"><i
+                                            class="ti ti-circle-check"></i>&nbsp;My Appointments</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="track-deliveries-tab" data-bs-toggle="tab"
+                                        data-bs-target="#track-deliveries-tab-pane" type="button" role="tab"
+                                        aria-controls="track-deliveries-tab-pane" aria-selected="false"><i
+                                            class="ti ti-truck-delivery"></i>&nbsp;Track Deliveries</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- -- -->
+                        <div class="tab-content mt-4 product-book" id="myTabContent">
+                            <!-- tab package -->
+                            <div class="tab-pane fade show active" id="my-package-tab-pane" role="tabpanel"
+                                aria-labelledby="home-tab" tabindex="0">
+                                <div class="py-4">
+                                    <h4 class="text-uppercase mb-4 d-flex text-brand fs-5">Active Subscription</h4>
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div class="box-subscription d-flex flex-column flex-lg-row">
+                                                <div class="card-meal">
+                                                    <div class="over-lay">
+                                                        <div>
+                                                            <h4 class="text-uppercase">Bulk Up</h4>
+                                                            <div class="status-label expired-label">Expired</div>
+                                                            <!-- <div class="status-label active-label">Active</div> -->
+                                                        </div>
+                                                        <p>Weight gain and increase muscle mass meal plan</p>
+                                                    </div>
+                                                    <img src="img/bulk_up.webp" alt="">
+                                                </div>
+                                                <div class="p-4 w-100">
+                                                    <div class="d-flex justify-content-between w-100 mb-4">
+                                                        <div class="w-100">Start Date</div>
+                                                        <div class="w-100 d-flex justify-content-end">
+                                                            <strong>30/01/2025</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between w-100 mb-4">
+                                                        <div class="w-100">Last Delivery Date</div>
+                                                        <div class="w-100 d-flex justify-content-end">
+                                                            <strong>05/01/2025</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between w-100 mb-4">
+                                                        <div class="w-100">Payment Status</div>
+                                                        <div class="w-100 d-flex justify-content-end">
+                                                            <strong class="text-success">Done</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between w-100 mb-4">
+                                                        <div class="w-100">Expiry Date</div>
+                                                        <div class="w-100 d-flex justify-content-end">
+                                                            <strong class="text-danger">05/01/2025</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between w-100 mb-4">
+                                                        <div class="w-100">Auto Renewal</div>
+                                                        <div class="w-100 d-flex justify-content-end main-switch">
+                                                            <label class="switch">
+                                                                <input type="checkbox" id="toggle">
+                                                                <span class="slider"></span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between w-100 mb-4">
+                                                        <div class="w-100">
+                                                            Remaining Boxes For
+                                                            Delivery As Of <strong>18/12/2024</strong>
+                                                        </div>
+                                                        <div class="w-100 d-flex justify-content-end main-switch">
+                                                            <div class="number">7</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#" class="w-100 btn-outline"><i
+                                                                class="ti ti-receipt"></i>&nbsp;Receipt</a>
+                                                        <a href="#" class="btn-first w-100">Edit Meal Plan</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <a href="#" class="add-new">
+                                                <i class="ti ti-circle-plus"></i>
+                                                Add New Package
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- tab menu selection -->
+                            <div class="tab-pane fade" id="menu-selection-tab-pane" role="tabpanel"
+                                aria-labelledby="profile-tab" tabindex="0">
+                                <div class="py-4">
+                                    <div class="d-flex">
+                                        <a href="#" class="card-link-box">
+                                            <div class="overlay-detail">
+                                                <h3>Bulk Up</h3>
+                                            </div>
+                                            <img src="img/bulk_up.webp" alt="">
+                                        </a>
+                                    </div>
+
+                                    <!-- Generate your menus list from here -->
+                                    <div class="p-5 d-flex flex-column align-items-center rounded-3 bg-gray my-4">
+
+                                        <!-- spinner -->
+                                        <div class="spinner-container">
+                                            <svg class="spinner" viewBox="0 0 50 50">
+                                                <circle class="path" cx="25" cy="25" r="20" fill="none"
+                                                    stroke-width="5" />
+                                            </svg>
+                                        </div>
+                                        <!-- spinner -->
+
+                                        <p>Generate your menus list from here</p>
+                                        <a href="#" class="btn-first w-auto px-4">Generate Your Menu</a>
+                                    </div>
+
+                                    <!-- selected date -->
+                                    <div class="d-flex align-items-center gap-2">
+                                        <strong class="fs-5">14/04/2025</strong>
+                                        <span class="fs-5">-</span>
+                                        <strong class="fs-5">19/04/2025</strong>
+                                    </div>
+
+                                    <!-- date ranges -->
+                                    <div class="d-flex gap-2 mt-4 mb-4">
+                                        <div class="radio-group">
+                                            <input type="radio" id="r1" name="duration" class="radio-input" checked>
+                                            <label for="r1" class="radio-label">14</label>
+
+                                            <input type="radio" id="r2" name="duration" class="radio-input">
+                                            <label for="r2" class="radio-label">15</label>
+
+                                            <input type="radio" id="r3" name="duration" class="radio-input">
+                                            <label for="r3" class="radio-label">16</label>
+
+                                            <input type="radio" id="r4" name="duration" class="radio-input">
+                                            <label for="r4" class="radio-label">17</label>
+
+                                            <input type="radio" id="r5" name="duration" class="radio-input">
+                                            <label for="r5" class="radio-label">18</label>
+
+                                            <input type="radio" id="r6" name="duration" class="radio-input">
+                                            <label for="r6" class="radio-label">19</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Breakfast -->
+                                    <div class="d-flex border-bottom">
+                                        <h3 class="text-brand">Breakfast</h3>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Select Dish</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Select Dish</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Alternative</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Lunch -->
+                                    <div class="d-flex border-bottom">
+                                        <h3 class="text-brand">Lunch</h3>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Select Dish</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Select Dish</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Alternative</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Lunch Salad -->
+                                    <div class="d-flex border-bottom">
+                                        <h3 class="text-brand">Lunch Salad</h3>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Select Dish</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Select Dish</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Alternative</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Dinner -->
+                                    <div class="d-flex border-bottom">
+                                        <h3 class="text-brand">Dinner</h3>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Select Dish</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Select Dish</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Alternative</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Dinner Salad -->
+                                    <div class="d-flex border-bottom">
+                                        <h3 class="text-brand">Dinner Salad</h3>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Select Dish</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Select Dish</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Alternative</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Dinner Combo -->
+                                    <div class="d-flex border-bottom">
+                                        <h3 class="text-brand">Dinner Combo</h3>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Select Dish</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Select Dish</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Alternative</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Afternoon Snack -->
+                                    <div class="d-flex border-bottom">
+                                        <h3 class="text-brand">Afternoon Snack</h3>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Select Dish</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Select Dish</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-4">
+                                            <div class="d-flex mb-3">
+                                                <div class="w-100">
+                                                    <label for="" class="required-label">Alternative</label>
+                                                </div>
+                                                <div>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form">
+                                                <select name="" class="form-select" id="">
+                                                    <option value="">Select</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                    <option value="">Food Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- tab health Profile -->
+                            <div class="tab-pane fade" id="my-health-profile-tab-pane" role="tabpanel"
+                                aria-labelledby="contact-tab" tabindex="0">
+                                <div class="py-4">
+                                    <h4 class="text-uppercase mb-4 d-flex text-brand fs-5">Current Status</h4>
+                                    <p>To assess your weight,body composition and ideal health and fiitness targer,
+                                        refer to your dietitian.</p>
+                                    <div class="d-flex flex-column flex-lg-row gap-3">
+                                        <div class="w-100 box-stats p-5 current-bg flex-column">
+                                            <img src="img/current-weight.svg" alt="">
+                                            <strong class="pt-4 fs-4">73.5 kg</strong>
+                                            <p>Current Weight</p>
+                                        </div>
+                                        <div class="w-100 box-stats p-5 target-bg flex-column">
+                                            <img src="img/current-s.svg" alt="">
+                                            <strong class="pt-4 fs-4">62.5 kg</strong>
+                                            <p>Target Weight</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column flex-lg-row gap-3 mt-3">
+                                        <div
+                                            class="box-stats p-3 py-4 bg-waiste flex-column align-items-center justify-content-center">
+                                            <img src="img/waiste.svg" alt="">
+                                            <strong class="pt-4 fs-4">62.5 kg</strong>
+                                            <p>Target Weight</p>
+                                        </div>
+                                        <div
+                                            class="box-stats p-3 flex-column align-items-center justify-content-center bg-fat">
+                                            <img src="img/increased.svg" alt="">
+                                            <strong class="pt-4 fs-4">18% (Increased)</strong>
+                                            <p>Body Fat%</p>
+                                        </div>
+                                        <div
+                                            class="box-stats p-3 flex-column align-items-center justify-content-center bg-bmi">
+                                            <img src="img/bmi.svg" alt="">
+                                            <strong class="pt-4 fs-4">Normal (22.5 BMI)</strong>
+                                            <p>BMI Status</p>
+                                        </div>
+                                        <div
+                                            class="box-stats p-3 flex-column align-items-center justify-content-center bg-calori">
+                                            <img src="img/caloric.svg" alt="">
+                                            <strong class="pt-4 fs-4">Daily (1800 Kcal)</strong>
+                                            <p>Caloric Intake</p>
+                                        </div>
+                                    </div>
+                                    <!-- butto -->
+                                    <div class="d-flex mt-4 light-bg">
+                                        <a href="#" class="btn-fancy" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                                            <span>Book an Appointment</span>
+                                            <i class="ti ti-arrow-up-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- tab appointment -->
+                            <div class="tab-pane fade" id="my-appointments-tab-pane" role="tabpanel"
+                                aria-labelledby="contact-tab" tabindex="0">
+                                <div class="py-4">
+                                    <h4 class="text-uppercase mb-4 d-flex text-brand fs-5">My APPOINTMENTS</h4>
+                                    <!-- card -->
+                                    <div class="booking-card mt-4">
+                                        <div class="booking-info">
+                                            <h4>Full body Scrub</h4>
+                                            <p>Dubai, United Arab Emirates</p>
+                                            <div class="dietitian">Dietitian: Kiram El Tbayil</div>
+                                        </div>
+                                        <div class="booking-meta">
+                                            <div class="meta-item">
+                                                <i class="ti ti-calendar-event"></i>
+                                                <span>06/03/2025</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="ti ti-clock-hour-10"></i>
+                                                <span>04:00pm - 5:00pm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- butto -->
+                                    <div class="d-flex mt-4 light-bg">
+                                        <a href="#" class="btn-fancy" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                                            <span>Book an Appointment</span>
+                                            <i class="ti ti-arrow-up-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- tab deliveries -->
+                            <div class="tab-pane fade" id="track-deliveries-tab-pane" role="tabpanel"
+                                aria-labelledby="contact-tab" tabindex="0">
+                                <div class="py-4">
+                                    <div class="empty-state-card">
+                                        <div class="empty-state-content">
+                                            <i class="ti ti-truck-delivery fs-2 track"></i>
+                                            <h3>No Deliveries</h3>
+                                            <p>It looks like there aren't any deliveries listed at the moment!</p>
+                                        </div>
+                                    </div>
+                                    <!-- butto -->
+                                    <div class="d-flex mt-4 light-bg">
+                                        <a href="#" class="btn-fancy" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal" data-bs-whatever="@mdo">
+                                            <span>Book an Appointment</span>
+                                            <i class="ti ti-arrow-up-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- modal book apointment -->
+                <div class="modal fade modal-half-height" id="exampleModal" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="container py-5">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <h2 class="h2 text-brand d-flex mb-4">BOOK AN APPOINTMENT</h2>
+                                        </div>
+                                        <div class="col-lg-12 mt-4">
+                                            <div class="row form">
+                                                <div class="col-lg-3 col-md-6 mb-4">
+                                                    <label for="" class="required-label">Location</label>
+                                                    <select name="" class="form-select" id="">
+                                                        <option value="">United Arab Emirates</option>
+                                                        <option value="">United Arab Emirates</option>
+                                                        <option value="">United Arab Emirates</option>
+                                                        <option value="">United Arab Emirates</option>
+                                                        <option value="">United Arab Emirates</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 mb-4">
+                                                    <label for="" class="required-label">Dietitian</label>
+                                                    <select name="" class="form-select" id="">
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 mb-4">
+                                                    <label for="" class="required-label">Reason</label>
+                                                    <select name="" class="form-select" id="">
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 mb-4">
+                                                    <label for="" class="required-label">Date</label>
+                                                    <select name="" class="form-select" id="">
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 mb-4">
+                                                    <label for="" class="required-label">Time (From)</label>
+                                                    <select name="" class="form-select" id="">
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-3 col-md-6 mb-4">
+                                                    <label for="" class="required-label">Time (To)</label>
+                                                    <select name="" class="form-select" id="">
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                        <option value="">Names</option>
+                                                    </select>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="col-lg-12">
+                                            <div
+                                                class="d-flex flex-column flex-lg-row justify-content-end gap-3 align-items-center">
+                                                <a data-bs-dismiss="modal"
+                                                    class="btn-link w-100 w-lg-auto px-4">Cancel</a>
+                                                <a data-bs-dismiss="modal" class="btn-outline w-100 w-lg-auto px-4"><i
+                                                        class="ti ti-phone"></i>&nbsp;Call Us</a>
+                                                <div class="d-flex light-bg w-100 w-lg-auto">
+                                                    <a href="#" class="btn-fancy w-100 w-lg-auto">
+                                                        <span class="w-100 w-lg-auto">Request Appointment</span>
+                                                        <i class="ti ti-arrow-up-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========FOOTER=========== -->
+    <footer class="padding-top">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="mb-5">
+                        <img src="img/logo.svg" alt="">
+                    </div>
+                    <p class="text-white">We don’t just offer meals, we help shape lifestyles. Connect with us!</p>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="tel:800-4387546" class="d-flex gap-2 align-items-center text-white"><i
+                                class="ti ti-phone color-shade-2"></i><span>800-4387546</span></a>
+                        <a href="mailto:dubai@slimandlite.ae" class="d-flex gap-2 align-items-center text-white"><i
+                                class="ti ti-mail color-shade-2"></i><span>dubai@slimandlite.ae</span></a>
+                    </div>
+                    <div class="d-flex gap-2 app-icon mt-5">
+                        <a href="#">
+                            <img src="img/appstore.webp" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/googleplay.webp" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row links">
+                        <div class="col-lg-4  mb-5 mb-lg-0">
+                            <h5>Quicklinks</h5>
+                            <div class="d-flex flex-column gap-3">
+                                <a href="/">Home</a>
+                                <a href="about_us.html">About Us</a>
+                                <a href="contact_us.html">Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  mb-5 mb-lg-0">
+                            <h5>Meal Plans</h5>
+                            <div class="d-flex flex-column gap-3">
+                                <a href="#">Getslim</a>
+                                <a href="#">Bulk Up</a>
+                                <a href="#">Keto</a>
+                                <a href="#">Vegan</a>
+                                <a href="#">Med-Lite</a>
+                                <a href="#">Healthymumz</a>
+                                <a href="#">Lil Tots</a>
+                                <a href="#">Befit</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <h5>Learn More</h5>
+                            <div class="d-flex flex-column gap-3">
+                                <a href="faq.html">FAQ</a>
+                                <a href="blog.html">Blogs</a>
+                                <a href="terms-condition.html">Terms & Conditions</a>
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-footer py-4">
+            <div class="d-flex align-items-center container flex-column flex-lg-row gap-3 gap-lg-0">
+                <div class="col-lg-6 text-white">
+                    © 2025 Slim’n Lite. All Rights Reserved.
+                </div>
+                <div class="col-lg-6 d-flex justify-content-end">
+                    <div class="social-media gap-2">
+                        <a href="#"><i class="ti ti-brand-facebook"></i></a>
+                        <a href="#"><i class="ti ti-brand-x"></i></a>
+                        <a href="#"><i class="ti ti-brand-instagram"></i></a>
+                        <a href="#"><i class="ti ti-brand-linkedin"></i></a>
+                        <a href="#"><i class="ti ti-brand-youtube"></i></a>
+                        <a href="#"><i class="ti ti-brand-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

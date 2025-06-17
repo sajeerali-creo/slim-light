@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blite</title>
+    <!-- main framework css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- iconfont -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <!-- main font -->
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+    <!-- main style -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+
+<body>
+    <header class="main-header d-flex align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="/" class="d-flex align-items-center">
+                <img src="img/logo.svg" class="logo" alt="">
+            </a>
+            <div class="d-none d-lg-block">
+                <div class="d-flex gap-5 menus align-items-center">
+                    <a href="meal_plans.html">Meal Plans</a>
+                    <a href="our_services.html">Our Services</a>
+                    <a href="about_us.html">About Us</a>
+                    <a href="contact_us.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="d-none d-lg-block">
+                <div class="d-flex align-items-center gap-2">
+                    <a href="login.html" class="btn-second">Login</a>
+                    <a href="sign-up.html" class="btn-first">Sign Up</a>
+                </div>
+            </div>
+            <div class="d-lg-none">
+                <a href="#" class="btn-menu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+                        class="ti ti-menu-4"></i></a>
+            </div>
+        </div>
+
+        <!-- offcanvas -->
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-body">
+                <div class="d-flex flex-column gap-4 justify-content-between h-100">
+                    <div class="d-flex gap-4 flex-column">
+                        <div class="user-card">
+                            <div class="user-avtar">
+                                <!-- <img src="img/avatar.webp" alt=""> -->
+                                <i class="ti ti-user"></i>
+                            </div>
+                            <strong class="text-white mt-2 d-flex">Thomas Miller</strong>
+                        </div>
+                        <div class="d-flex flex-column gap-5 menus p-4">
+                            <a href="meal_plans.html">Meal Plans</a>
+                            <a href="our_services.html">Our Services</a>
+                            <a href="about_us.html">About Us</a>
+                            <a href="contact_us.html">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column gap-2 p-4">
+                        <a href="login.html" class="btn-second w-100">Login</a>
+                        <a href="sign-up.html" class="btn-first w-100">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="whatsap">
+            <a href="https://wa.me/+971503123013" target="_blank" class="pulse"><i class="ti ti-brand-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <!-- ===========BANNER=========== -->
+    <section class="inner-banner">
+    </section>
+
+    <!-- ===========SUBHEADER=========== -->
+    <section class="py-5 bg-inner-sub-head">
+        <div class="container">
+            <div class="d-flex flex-column flex-lg-row justify-content-between">
+                <div class="d-flex flex-column align-items-start">
+                    <h4 class="h2">Who We Are</h4>
+                    <p>BLite: 20+ Years of Nutrition Expertise in the UAE</p>
+                </div>
+                <div>
+                    <div class="bredcums">
+                        <a href="/">Home</a>/ About us
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===========SIGNATURE DISH=========== -->
+    <section class="padding-bottom padding-top">
+        <div class="container">
+            <div class="row flex-column-reverse flex-lg-row justify-content-between">
+                <div class="col-lg-5">
+                    <h2 class="h2">Eat Light, Live Bright</h2>
+                    <p>BLite is a trusted pioneer in the UAE’s health and wellness industry, with over two decades of
+                        experience helping people lead healthier, more fulfilling lives.</p>
+                    <p>Formerly known as Slim’n Lite, BLite specializes in customized nutrition programs, chef-crafted
+                        meals, and professional dietary support from licensed clinical dietitians. Whether you're aiming
+                        for weight loss, muscle gain, or managing conditions like diabetes, hypertension, or PCOS, we
+                        provide personalized meal plans designed for long-term success.</p>
+                    <p>As part of NCC Holding, we combine clinical nutrition expertise with gourmet cooking to deliver
+                        balanced, delicious meals that fit seamlessly into your lifestyle. Every program is tailored to
+                        your health goals, ensuring convenience, sustainability, and measurable results.</p>
+                    <p>At BLite, we make healthy eating simple and enjoyable—with science-backed strategies,
+                        compassionate care, and premium service.</p>
+
+                </div>
+                <div class="col-lg-6 position-relative d-flex justify-content-end gap-4 gap-lg-0 mb-4 mb-lg-0">
+                    <div class="abt-1" data-aos="fade-up">
+                        <img src="img/abt-4.webp" alt="">
+                    </div>
+                    <div class="abt-2" data-aos="fade-up">
+                        <img src="img/abt-3.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===========SUBHEADER=========== -->
+    <section class="padding-bottom padding-top bg-gray">
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <h2 class="h2">Meet Our Experts</h2>
+                    <p>Licensed Dietitians, Trusted Care</p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up">
+                    <p>Behind every successful meal plan is a dedicated expert. Our team of DHA-licensed dietitians
+                        brings a wealth of experience and care to every consultation. With a deep understanding of
+                        regional health concerns and international best practices, our specialists guide you through:
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="team-box">
+                        <div class="team-details">
+                            <h5>Eman Baker</h5>
+                            <p>Clinical Dietitian</p>
+                        </div>
+                        <img src="img/team_1.webp" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="team-box">
+                        <div class="team-details">
+                            <h5>Mireille Ahmad</h5>
+                            <p>Senior Dietitian </p>
+                        </div>
+                        <img src="img/team_2.webp" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="team-box">
+                        <div class="team-details">
+                            <h5>Sara Obeid</h5>
+                            <p>Clinical Nutritionist </p>
+                        </div>
+                        <img src="img/team_3.webp" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="team-box">
+                        <div class="team-details">
+                            <h5>Nermin Makhoul</h5>
+                            <p>Clinical Dietitian</p>
+                        </div>
+                        <img src="img/team_4.webp" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="team-box">
+                        <div class="team-details">
+                            <h5>Kiram El Tbayli</h5>
+                            <p>Clinical Dietitian / Director</p>
+                        </div>
+                        <img src="img/team_5.webp" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="team-box">
+                        <div class="team-details">
+                            <h5>Marisa Bousaba</h5>
+                            <p>Clinical Dietitian</p>
+                        </div>
+                        <img src="img/team_6.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ===========SUBHEADER=========== -->
+    <section class="padding-bottom padding-top">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-6">
+                    <div class="mb-4">
+                        <h2 class="h2">Why Choose Slim’n Lite</h2>
+                        <h4>Leave Your Shopping, Cooking and Calorie Counting to Us!</h4>
+                    </div>
+                    <ul class="bullet">
+                        <li>Abu Dhabi & Dubai Health Authority Licensed Rehabilitation Centers</li>
+                        <li>ISO Certified</li>
+                        <li>HACCP Certified</li>
+                        <li>Weqaya approved menus</li>
+                        <li>A highly qualified team of experts and licensed dietitians  </li>
+                        <li>Regular monitoring and evaluation of your program to GUARANTEE your desired goals are
+                            achieved</li>
+                    </ul>
+
+                </div>
+                <div class="col-lg-5 position-relative d-flex justify-content-end gap-4 gap-lg-0 mb-4 mb-lg-0">
+                    <div class="image-2">
+                        <div class="d-flex mt-5 light-bg over-flow-btn">
+                            <a href="#" class="btn-fancy">
+                                <span>Book Now</span>
+                                <i class="ti ti-arrow-up-right"></i>
+                            </a>
+                        </div>
+                        <img src="img/image-2.webp" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-12 padding-top">
+                    <div class="d-flex gap-3">
+                        <div class="box-logo">
+                            <img src="img/iso.webp" alt="">
+                        </div>
+                        <div class="box-logo">
+                            <img src="img/haccp.webp" alt="">
+                        </div>
+                        <div class="box-logo">
+                            <img src="img/dha.webp" alt="">
+                        </div>
+                        <div class="box-logo">
+                            <img src="img/dh.webp" alt="">
+                        </div>
+                        <div class="box-logo">
+                            <img src="img/weqaya.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="padding-bottom padding-top bg-g2">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-5">
+                    <img src="img/image-3.webp" class="w-100 mb-4 mb-lg-0" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-4">
+                        <h2 class="h2">Our menu</h2>
+                        <h4>Delicious, Dietitian-Approved, Delivered Fresh</h4>
+                    </div>
+                    <p>
+                        At BLite, healthy eating is never dull. Our menu is designed to fuel your body, satisfy your
+                        taste buds, and fit your lifestyle.
+                    </p>
+                    <p>
+                        Every dish is carefully curated by our licensed dietitians and cooked fresh by expert chefs.
+                        Whether you're aiming for fat loss, strength gains, or better overall wellness—there’s something
+                        for you.
+                    </p>
+                    <strong class="d-flex mb-4">All meals are:</strong>
+                    <ul class="bullet">
+                        <li>Freshly prepared with high-quality ingredients</li>
+                        <li>Free from preservatives and artificial additives</li>
+                        <li>Portion-controlled and nutritionally optimized</li>
+                        <li>Delivered fresh to your doorstep, across the UAE</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="box-card">
+                        <strong>Main Meals</strong>
+                        <p>Balanced dishes full of essential nutrients</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="box-card">
+                        <strong>Fresh Snacks & Salads</strong>
+                        <p>Smart choices to keep you energized</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="box-card">
+                        <strong>Nourishing Drinks & Fruits</strong>
+                        <p>Light options for hydration and wellness</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="box-card">
+                        <strong>Dairy & Plant-Based Items</strong>
+                        <p>For vegetarians and special dietary needs</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="box-card">
+                        <strong>Keto Meals</strong>
+                        <p>Low-carb, high-fat options for energy and
+                            fat-burning</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="box-card">
+                        <strong>Gluten-Free Meals</strong>
+                        <p>Ideal for sensitivities or lifestyle choices</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="box-card">
+                        <strong>High-Protein Meals</strong>
+                        <p>Perfect for fitness, muscle support, and sustained energy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <a href="#" class="menu-button">
+                        <span>Sample Menu</span>
+                        <i class="ti ti-menu-3"></i>
+                    </a>
+                </div>
+                <div class="col-lg-4  mb-3 mb-lg-0">
+                     <a href="#" class="menu-button">
+                        <span>Keto Menu</span>
+                        <i class="ti ti-menu-3"></i>
+                    </a>
+                </div>
+                <div class="col-lg-4  mb-3 mb-lg-0">
+                     <a href="#" class="menu-button">
+                        <span>Vegan Menu</span>
+                        <i class="ti ti-menu-3"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========FOOTER=========== -->
+    <footer class="padding-top">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="mb-5">
+                        <img src="img/logo.svg" alt="">
+                    </div>
+                    <p class="text-white">We don’t just offer meals, we help shape lifestyles. Connect with us!</p>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="tel:800-4387546" class="d-flex gap-2 align-items-center text-white"><i
+                                class="ti ti-phone color-shade-2"></i><span>800-4387546</span></a>
+                        <a href="mailto:dubai@slimandlite.ae" class="d-flex gap-2 align-items-center text-white"><i
+                                class="ti ti-mail color-shade-2"></i><span>dubai@slimandlite.ae</span></a>
+                    </div>
+                    <div class="d-flex gap-2 app-icon mt-5">
+                        <a href="#">
+                            <img src="img/appstore.webp" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/googleplay.webp" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row links">
+                        <div class="col-lg-4  mb-5 mb-lg-0">
+                            <h5>Quicklinks</h5>
+                            <div class="d-flex flex-column gap-3">
+                                <a href="/">Home</a>
+                                <a href="about_us.html">About Us</a>
+                                <a href="contact_us.html">Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  mb-5 mb-lg-0">
+                            <h5>Meal Plans</h5>
+                            <div class="d-flex flex-column gap-3">
+                                <a href="#">Getslim</a>
+                                <a href="#">Bulk Up</a>
+                                <a href="#">Keto</a>
+                                <a href="#">Vegan</a>
+                                <a href="#">Med-Lite</a>
+                                <a href="#">Healthymumz</a>
+                                <a href="#">Lil Tots</a>
+                                <a href="#">Befit</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <h5>Learn More</h5>
+                            <div class="d-flex flex-column gap-3">
+                                <a href="faq.html">FAQ</a>
+                                <a href="blog.html">Blogs</a>
+                                <a href="terms-condition.html">Terms & Conditions</a>
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-footer py-4">
+            <div class="d-flex align-items-center container flex-column flex-lg-row gap-3 gap-lg-0">
+                <div class="col-lg-6 text-white">
+                    © 2025 Slim’n Lite. All Rights Reserved.
+                </div>
+                <div class="col-lg-6 d-flex justify-content-end">
+                    <div class="social-media gap-2">
+                        <a href="#"><i class="ti ti-brand-facebook"></i></a>
+                        <a href="#"><i class="ti ti-brand-x"></i></a>
+                        <a href="#"><i class="ti ti-brand-instagram"></i></a>
+                        <a href="#"><i class="ti ti-brand-linkedin"></i></a>
+                        <a href="#"><i class="ti ti-brand-youtube"></i></a>
+                        <a href="#"><i class="ti ti-brand-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

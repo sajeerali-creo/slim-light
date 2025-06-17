@@ -1,0 +1,110 @@
+:root {
+    --white: #fff;
+    --primary: #00483A;
+    --black: #333333;
+    --text: #fff;
+    --danger: #E83F3F;
+    --success:#2CB058;
+
+    // shades
+    --shade-1: #E6EDEB;
+    --shade-2: #96B4AE;
+    --shade-3: #6B958D;
+    --shade-4: #2B675B; // primary
+    --shade-5: #003229;
+    --shade-6: #002C23;
+
+    // typo
+    --title: #333333;
+    --paragraph: #353731;
+    --green: #C8D02D;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+// bg
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.bgmeal-plan {
+    background-color: var(--shade-1);
+}
+
+.bg-howitworks {
+    background-color: var(--green);
+    overflow: hidden;
+}
+
+
+.bg-shade-1 {
+    background-color: var(--shade-1);
+}
+
+.bg-shade-2 {
+    background-color: var(--shade-2);
+}
+
+.bg-shade-3 {
+    background-color: var(--shade-3);
+}
+
+.bg-shade-4 {
+    background-color: var(--shade-4);
+}
+
+.bg-shade-5 {
+    background-color: var(--shade-5);
+}
+
+.bg-shade-6 {
+    background-color: var(--shade-6);
+}
+
+.color-shade-1 {
+    color: var(--shade-1);
+}
+
+.color-shade-2 {
+    color: var(--shade-2);
+}
+
+.color-shade-3 {
+    color: var(--shade-3);
+}
+
+.color-shade-4 {
+    color: var(--shade-4);
+}
+
+.color-shade-5 {
+    color: var(--shade-5);
+}
+
+.color-shade-6 {
+    color: var(--shade-6);
+}
+
+.bg-gray {
+    background: linear-gradient(180deg, #F1F1F1 0%, rgba(241, 241, 241, 0.3) 100%);
+}
+
+.bg-g2 {
+    background: linear-gradient(180deg, #F7F7DF 0%, rgba(247, 247, 223, 0) 100%);
+}
+
+.login-bg {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+
+    @media (min-width: 992px) {
+        height: 100vh;
+    }
+}
+
+.text-brand {
+    color: var(--primary);
+}
