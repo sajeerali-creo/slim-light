@@ -830,20 +830,80 @@
                                             <img src="img/current-weight.svg" alt="">
                                             <strong class="pt-4 fs-4">73.5 kg</strong>
                                             <p>Current Weight</p>
+                                            <a data-bs-toggle="modal" data-bs-target="#current-weight"
+                                                class="btn-outline-small"><i class="ti ti-pencil"></i>&nbsp;Edit</a>
                                         </div>
+
+                                        <!-- update current weight -->
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="current-weight" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <div class="form">
+                                                            <label for="">Current Weight</label>
+                                                            <input type="email" class="form-control w-100"
+                                                                id="exampleFormControlInput1" placeholder="KG">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <div
+                                                            class="d-flex flex-column flex-lg-row justify-content-end gap-3 align-items-center">
+                                                            <a data-bs-dismiss="modal"
+                                                                class="btn-link w-100 w-lg-auto px-4">Cancel</a>
+                                                            <div class="d-flex light-bg w-100 w-lg-auto">
+                                                                <a href="#" class="btn-fancy w-100 w-lg-auto">
+                                                                    <span class="w-100 w-lg-auto">Update</span>
+                                                                    <i class="ti ti-arrow-up-right"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <div class="w-100 box-stats p-5 target-bg flex-column">
                                             <img src="img/current-s.svg" alt="">
                                             <strong class="pt-4 fs-4">62.5 kg</strong>
                                             <p>Target Weight</p>
+                                            <a data-bs-toggle="modal" data-bs-target="#target-weight"
+                                                 class="btn-outline-small"><i
+                                                    class="ti ti-pencil"></i>&nbsp;Edit</a>
+                                        </div>
+
+                                        <!-- update Target Weight -->
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="target-weight" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <div class="form">
+                                                            <label for="">Target Weight</label>
+                                                            <input type="email" class="form-control w-100"
+                                                                id="exampleFormControlInput1" placeholder="KG">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <div
+                                                            class="d-flex flex-column flex-lg-row justify-content-end gap-3 align-items-center">
+                                                            <a data-bs-dismiss="modal"
+                                                                class="btn-link w-100 w-lg-auto px-4">Cancel</a>
+                                                            <div class="d-flex light-bg w-100 w-lg-auto">
+                                                                <a href="#" class="btn-fancy w-100 w-lg-auto">
+                                                                    <span class="w-100 w-lg-auto">Update</span>
+                                                                    <i class="ti ti-arrow-up-right"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-column flex-lg-row gap-3 mt-3">
-                                        <div
-                                            class="box-stats p-3 py-4 bg-waiste flex-column align-items-center justify-content-center">
-                                            <img src="img/waiste.svg" alt="">
-                                            <strong class="pt-4 fs-4">62.5 kg</strong>
-                                            <p>Target Weight</p>
-                                        </div>
                                         <div
                                             class="box-stats p-3 flex-column align-items-center justify-content-center bg-fat">
                                             <img src="img/increased.svg" alt="">

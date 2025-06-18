@@ -329,6 +329,17 @@ a:hover {
   border-radius: 16px;
 }
 
+.btn-outline-small {
+  height: 36px;
+  width: auto;
+  border-radius: 35px;
+  border: 1px solid var(--primary);
+  padding: 0px 24px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
 .abt-1 {
   width: 50%;
   overflow: hidden;
