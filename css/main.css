@@ -289,6 +289,46 @@ a:hover {
     box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }
+.bg-start-actions {
+  background-color: #f1f1f1;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+.bg-start-actions .btn-start {
+  width: 100%;
+  height: 38px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2cb058;
+  color: #fff;
+  border-radius: 16px;
+}
+.bg-start-actions .btn-stop {
+  width: 100%;
+  height: 38px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--danger);
+  color: #fff;
+  border-radius: 16px;
+}
+.bg-start-actions .btn-resume {
+  width: 100%;
+  height: 38px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--info);
+  color: #000;
+  border-radius: 16px;
+}
+
 .abt-1 {
   width: 50%;
   overflow: hidden;
@@ -617,7 +657,7 @@ body {
   --shade-6: #002C23;
   --title: #333333;
   --paragraph: #353731;
-  --green: #C8D02D;
+  --info: #C8D02D;
 }
 
 .text-white {
