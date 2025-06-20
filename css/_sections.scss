@@ -770,3 +770,18 @@
      padding: 15px 20px;
      max-height: 200px;
  }
+ .coupen-code{
+    input{
+        height: 40px;
+        font-size: 14px;
+    }
+    button{
+        border: none;
+        height: 40px;
+        background-position: 0;
+        border-radius: 8px;
+        padding: 0px 16px;
+        background-color: var(--primary);
+        color: var(--white);
+    }
+ }

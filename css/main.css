@@ -1595,6 +1595,20 @@ body {
   max-height: 200px;
 }
 
+.coupen-code input {
+  height: 40px;
+  font-size: 14px;
+}
+.coupen-code button {
+  border: none;
+  height: 40px;
+  background-position: 0;
+  border-radius: 8px;
+  padding: 0px 16px;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
 .slider-container {
   overflow: hidden;
   padding: 20px 0;
