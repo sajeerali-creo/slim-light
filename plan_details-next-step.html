@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blite</title>
+    <!-- main framework css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- iconfont -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <!-- main font -->
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
+    <!-- main style -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+
+<body>
+    <header class="main-header d-flex align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="/" class="d-flex align-items-center">
+                <img src="img/logo.svg" class="logo" alt="">
+            </a>
+            <div class="d-none d-lg-block">
+                <div class="d-flex gap-5 menus align-items-center">
+                    <a href="meal_plans.html">Meal Plans</a>
+                    <a href="our_services.html">Our Services</a>
+                    <a href="about_us.html">About Us</a>
+                    <a href="contact_us.html">Contact Us</a>
+                </div>
+            </div>
+            <div class="d-none d-lg-block">
+                <div class="d-flex align-items-center gap-2">
+                    <a href="login.html" class="btn-second">Login</a>
+                    <a href="sign-up.html" class="btn-first">Sign Up</a>
+                </div>
+            </div>
+            <div class="d-lg-none">
+                <a href="#" class="btn-menu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i
+                        class="ti ti-menu-4"></i></a>
+            </div>
+        </div>
+
+        <!-- offcanvas -->
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-body">
+                <div class="d-flex flex-column gap-4 justify-content-between h-100">
+                    <div class="d-flex gap-4 flex-column">
+                        <div class="user-card">
+                            <div class="user-avtar">
+                                <!-- <img src="img/avatar.webp" alt=""> -->
+                                <i class="ti ti-user"></i>
+                            </div>
+                            <strong class="text-white mt-2 d-flex">Thomas Miller</strong>
+                        </div>
+                        <div class="d-flex flex-column gap-5 menus p-4">
+                            <a href="meal_plans.html">Meal Plans</a>
+                            <a href="our_services.html">Our Services</a>
+                            <a href="about_us.html">About Us</a>
+                            <a href="contact_us.html">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column gap-2 p-4">
+                        <a href="login.html" class="btn-second w-100">Login</a>
+                        <a href="sign-up.html" class="btn-first w-100">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="whatsap">
+            <a href="https://wa.me/+971503123013" target="_blank" class="pulse"><i class="ti ti-brand-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <!-- ===========BANNER=========== -->
+    <section class="inner-banner">
+    </section>
+
+    <!-- ===========SUBHEADER=========== -->
+
+    <section class="py-5 form">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="h2 text-brand d-flex mb-4">Add your shiping Address</h2>
+
+                            <div class="row mt-4">
+                                <div class="col-lg-12 product-book mb-4">
+                                    <div class="radio-group">
+                                        <input type="radio" id="r11" name="duration" class="radio-input">
+                                        <label for="r11" class="radio-label">Default</label>
+                                        <input type="radio" id="r22" name="duration" class="radio-input" checked>
+                                        <label for="r22" class="radio-label">Day Spesific</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 product-book mb-4">
+                                    <div class="radio-group">
+                                        <div class="d-flex align-items-center gap-3">
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" />
+                                                <span class="checkmark"></span>
+                                                <span>Sun</span>
+                                            </label>
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" />
+                                                <span class="checkmark"></span>
+                                                <span>Mon</span>
+                                            </label>
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" />
+                                                <span class="checkmark"></span>
+                                                <span>Tue</span>
+                                            </label>
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" />
+                                                <span class="checkmark"></span>
+                                                <span>Wen</span>
+                                            </label>
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" />
+                                                <span class="checkmark"></span>
+                                                <span>Thu</span>
+                                            </label>
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" />
+                                                <span class="checkmark"></span>
+                                                <span>Fri</span>
+                                            </label>
+                                            <label class="custom-checkbox">
+                                                <input type="checkbox" />
+                                                <span class="checkmark"></span>
+                                                <span>Sat</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 mb-4">
+                                    <div>
+                                        <label for="" class="required-label">Address Line 1</label>
+                                        <input type="email" class="form-control w-100" id="exampleFormControlInput1"
+                                            placeholder="sajeer.ali09@gmail.com">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div>
+                                        <label for="" class="required-label">Address Line 2 (Optional)</label>
+                                        <input type="email" class="form-control w-100" id="exampleFormControlInput1"
+                                            placeholder="sajeer.ali09@gmail.com">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div>
+                                        <label for="" class="required-label">Country</label>
+                                        <select name="" class="form-select" id="">
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div>
+                                        <label for="" class="required-label">State</label>
+                                        <select name="" class="form-select" id="">
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div>
+                                        <label for="" class="required-label">City</label>
+                                        <select name="" class="form-select" id="">
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div>
+                                        <label for="" class="required-label">Time Slot</label>
+                                        <select name="" class="form-select" id="">
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                            <option value="">United Arab Emirates</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div>
+                                        <label for="" class="required-label">Email ID</label>
+                                        <input type="email" class="form-control w-100" id="exampleFormControlInput1"
+                                            placeholder="sajeer.ali09@gmail.com">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div>
+                                        <label for="" class="required-label">Phone</label>
+                                        <input type="email" class="form-control w-100" id="exampleFormControlInput1"
+                                            placeholder="+971">
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 mb-4">
+                                    <div>
+                                        <label for="" class="required-label">Recipient Note</label>
+                                        <textarea name="" class="form-control" id=""></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <label class="custom-checkbox">
+                                        <input type="checkbox" />
+                                        <span class="checkmark"></span>
+                                        Ship to this address
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="plan-detail-card p-5">
+                        <h4 class="d-flex text-white mb-4">Gourmet Package</h4>
+                        <div class="d-flex flex-column gap-3 text-white">
+                            <hr>
+                            3 Main Meals + Sides + Snack + Fruit + Dairy Drink
+                            <hr>
+                            <div>Plan Duration: 14 Days</div>
+                            <hr>
+                            <small>Complimentary Dietary Consultation & Body Fat Analysis worth <b>250 AED</b></small>
+                            <small>Complimentary 2 Follow-Ups worth <b>300 AED</b></small>
+                            <hr>
+                            <div class="d-flex gap-1 coupen-code">
+                                <input type="text" class="form-control w-100" placeholder="PROMO CODE">
+                                <button class="btn-fancy">Submit</button>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between opacity-50">
+                                <span>Package Price</span>
+                                <strong>AED 1950</strong>
+                            </div>
+                            <div class="d-flex justify-content-between opacity-50">
+                                <span>Cooler bag deposit</span>
+                                <strong>AED 150</strong>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="fs-5">Subtotal (incl. VAT)</span>
+                                <strong class="d-flex justify-content-end fs-5">
+                                    AED 2197
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-lg-12">
+                            <div class="d-flex justify-content-end gap-3 align-items-center">
+                                <div class="d-flex light-bg w-100">
+                                    <a href="#" class="btn-fancy">
+                                        <span>Pay Now</span>
+                                        <i class="ti ti-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- ===========FOOTER=========== -->
+    <footer class="padding-top">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <div class="mb-5">
+                        <img src="img/logo.svg" alt="">
+                    </div>
+                    <p class="text-white">We don’t just offer meals, we help shape lifestyles. Connect with us!</p>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="tel:800-4387546" class="d-flex gap-2 align-items-center text-white"><i
+                                class="ti ti-phone color-shade-2"></i><span>800-4387546</span></a>
+                        <a href="mailto:dubai@slimandlite.ae" class="d-flex gap-2 align-items-center text-white"><i
+                                class="ti ti-mail color-shade-2"></i><span>dubai@slimandlite.ae</span></a>
+                    </div>
+                    <div class="d-flex gap-2 app-icon mt-5">
+                        <a href="#">
+                            <img src="img/appstore.webp" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/googleplay.webp" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row links">
+                        <div class="col-lg-4  mb-5 mb-lg-0">
+                            <h5>Quicklinks</h5>
+                            <div class="d-flex flex-column gap-3">
+                                <a href="/">Home</a>
+                                <a href="about_us.html">About Us</a>
+                                <a href="contact_us.html">Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  mb-5 mb-lg-0">
+                            <h5>Meal Plans</h5>
+                            <div class="d-flex flex-column gap-3">
+                                <a href="#">Getslim</a>
+                                <a href="#">Bulk Up</a>
+                                <a href="#">Keto</a>
+                                <a href="#">Vegan</a>
+                                <a href="#">Med-Lite</a>
+                                <a href="#">Healthymumz</a>
+                                <a href="#">Lil Tots</a>
+                                <a href="#">Befit</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <h5>Learn More</h5>
+                            <div class="d-flex flex-column gap-3">
+                                <a href="faq.html">FAQ</a>
+                                <a href="blog.html">Blogs</a>
+                                <a href="terms-condition.html">Terms & Conditions</a>
+                                <a href="privacy-policy.html">Privacy Policy</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sub-footer py-4">
+            <div class="d-flex align-items-center container flex-column flex-lg-row gap-3 gap-lg-0">
+                <div class="col-lg-6 text-white">
+                    © 2025 Slim’n Lite. All Rights Reserved.
+                </div>
+                <div class="col-lg-6 d-flex justify-content-end">
+                    <div class="social-media gap-2">
+                        <a href="#"><i class="ti ti-brand-facebook"></i></a>
+                        <a href="#"><i class="ti ti-brand-x"></i></a>
+                        <a href="#"><i class="ti ti-brand-instagram"></i></a>
+                        <a href="#"><i class="ti ti-brand-linkedin"></i></a>
+                        <a href="#"><i class="ti ti-brand-youtube"></i></a>
+                        <a href="#"><i class="ti ti-brand-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- script -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
