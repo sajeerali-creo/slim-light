@@ -47,6 +47,9 @@ a {
         background-color: var(--shade-5);
         color: var(--white);
     }
+    .spinner{
+        height: 25px;
+    }
 }
 
 .btn-outline {
@@ -363,4 +366,9 @@ a {
     color: var(--primary);
     display: flex;
     align-items: center;
+    background: none;
+    .spinner{
+        height: 16px;
+        width: 16px;
+    }
 }

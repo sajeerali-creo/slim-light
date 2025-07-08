@@ -51,6 +51,9 @@ a:hover {
   background-color: var(--shade-5);
   color: var(--white);
 }
+.btn-first .spinner {
+  height: 25px;
+}
 
 .btn-outline {
   width: 146px;
@@ -342,6 +345,11 @@ a:hover {
   color: var(--primary);
   display: flex;
   align-items: center;
+  background: none;
+}
+.btn-outline-small .spinner {
+  height: 16px;
+  width: 16px;
 }
 
 .abt-1 {

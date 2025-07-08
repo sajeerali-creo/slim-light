@@ -163,18 +163,20 @@
                                 <div class="py-4">
                                     <h4 class="text-uppercase mb-4 d-flex text-brand fs-5">Active Subscription</h4>
                                     <div class="row">
-                                        <div class="col-lg-8">
-                                            <div class="box-subscription d-flex flex-column flex-lg-row">
+                                        <div class="col-lg-8 d-flex flex-column gap-3">
+                                            <!-- package 1 -->
+                                            <div
+                                                class="box-subscription d-flex flex-column flex-lg-row align-items-center">
                                                 <div class="card-meal">
                                                     <div class="over-lay">
                                                         <div>
                                                             <h4 class="text-uppercase">Bulk Up</h4>
-                                                            <div class="status-label expired-label">Expired</div>
-                                                            <!-- <div class="status-label active-label">Active</div> -->
+                                                            <!-- <div class="status-label expired-label">Expired</div> -->
+                                                            <div class="status-label active-label">Active</div>
                                                         </div>
                                                         <p>Weight gain and increase muscle mass meal plan</p>
                                                     </div>
-                                                    <img src="img/bulk_up.webp" alt="">
+                                                    <img src="img/default-package.webp" alt="">
                                                 </div>
                                                 <div class="p-4 w-100">
                                                     <div class="d-flex justify-content-between w-100 mb-4">
@@ -201,15 +203,7 @@
                                                             <strong class="text-danger">05/01/2025</strong>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex justify-content-between w-100 mb-4">
-                                                        <div class="w-100">Auto Renewal</div>
-                                                        <div class="w-100 d-flex justify-content-end main-switch">
-                                                            <label class="switch">
-                                                                <input type="checkbox" id="toggle">
-                                                                <span class="slider"></span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
+
                                                     <div class="d-flex justify-content-between w-100 mb-4">
                                                         <div class="w-100">
                                                             Remaining Boxes For
@@ -234,13 +228,66 @@
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <!-- package 2 -->
+                                            <div
+                                                class="box-subscription d-flex flex-column flex-lg-row align-items-center">
+                                                <div class="card-meal">
+                                                    <div class="over-lay">
+                                                        <div>
+                                                            <h4 class="text-uppercase">Bulk Up</h4>
+                                                            <div class="status-label expired-label">Expired</div>
+                                                            <!-- <div class="status-label active-label">Active</div> -->
+                                                        </div>
+                                                        <p>Weight gain and increase muscle mass meal plan</p>
+                                                    </div>
+                                                    <img src="img/default-package.webp" alt="">
+                                                </div>
+                                                <div class="p-4 w-100">
+                                                    <div class="d-flex justify-content-between w-100 mb-4">
+                                                        <div class="w-100">Start Date</div>
+                                                        <div class="w-100 d-flex justify-content-end">
+                                                            <strong>30/01/2025</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between w-100 mb-4">
+                                                        <div class="w-100">Last Delivery Date</div>
+                                                        <div class="w-100 d-flex justify-content-end">
+                                                            <strong>05/01/2025</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between w-100 mb-4">
+                                                        <div class="w-100">Payment Status</div>
+                                                        <div class="w-100 d-flex justify-content-end">
+                                                            <strong class="text-success">Done</strong>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between w-100 mb-4">
+                                                        <div class="w-100">Expiry Date</div>
+                                                        <div class="w-100 d-flex justify-content-end">
+                                                            <strong class="text-danger">05/01/2025</strong>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="d-flex justify-content-between w-100 mb-4">
+                                                        <div class="w-100">
+                                                            Remaining Boxes For
+                                                            Delivery As Of <strong>18/12/2024</strong>
+                                                        </div>
+                                                        <div class="w-100 d-flex justify-content-end main-switch">
+                                                            <div class="number">0</div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="d-flex gap-2">
+                                                        <a href="#" class="w-100 btn-outline"><i
+                                                                class="ti ti-receipt"></i>&nbsp;Receipt</a>
+                                                        <a href="#" class="btn-first w-100">Renew</a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-lg-4">
-                                            <a href="#" class="add-new">
-                                                <i class="ti ti-circle-plus"></i>
-                                                Add New Package
-                                            </a>
-                                        </div>
+
                                     </div>
                                 </div>
 
@@ -250,29 +297,36 @@
                             <div class="tab-pane fade" id="menu-selection-tab-pane" role="tabpanel"
                                 aria-labelledby="profile-tab" tabindex="0">
                                 <div class="py-4">
-                                    <div class="d-flex">
-                                        <a href="#" class="card-link-box">
-                                            <div class="overlay-detail">
-                                                <h3>Bulk Up</h3>
-                                            </div>
-                                            <img src="img/bulk_up.webp" alt="">
-                                        </a>
-                                    </div>
-
                                     <!-- Generate your menus list from here -->
                                     <div class="p-5 d-flex flex-column align-items-center rounded-3 bg-gray my-4">
 
-                                        <!-- spinner -->
-                                        <div class="spinner-container">
+                                        <div class="form row justify-content-center align-items-center w-100 mb-4">
+                                            <div class="col-12 text-center mb-5">
+                                                <h3>Select preferred date and package</h3>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <input type="text" class="form-control" placeholder="14/04/2025">
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <select class="form-select">
+                                                    <option>Pckage Name</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <p>Generate your menus list from here</p>
+                                        <a href="#" class="btn-first w-auto px-4 gap-2">
+                                            Generate Your Menu
                                             <svg class="spinner" viewBox="0 0 50 50">
                                                 <circle class="path" cx="25" cy="25" r="20" fill="none"
                                                     stroke-width="5" />
                                             </svg>
+                                        </a>
+                                        <!-- spinner -->
+                                        <div class="spinner-container">
+
                                         </div>
                                         <!-- spinner -->
-
-                                        <p>Generate your menus list from here</p>
-                                        <a href="#" class="btn-first w-auto px-4">Generate Your Menu</a>
                                     </div>
 
                                     <!-- selected date -->
@@ -814,9 +868,12 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    <div class="alert alert-warning text-center" role="alert">
+                                       Please note any changes made within 2 working days will not be updated on the current meal plan
+                                    </div>
                                 </div>
                             </div>
+
 
                             <!-- tab health Profile -->
                             <div class="tab-pane fade" id="my-health-profile-tab-pane" role="tabpanel"
@@ -869,8 +926,7 @@
                                             <strong class="pt-4 fs-4">62.5 kg</strong>
                                             <p>Target Weight</p>
                                             <a data-bs-toggle="modal" data-bs-target="#target-weight"
-                                                 class="btn-outline-small"><i
-                                                    class="ti ti-pencil"></i>&nbsp;Edit</a>
+                                                class="btn-outline-small"><i class="ti ti-pencil"></i>&nbsp;Edit</a>
                                         </div>
 
                                         <!-- update Target Weight -->
@@ -915,6 +971,13 @@
                                             <img src="img/bmi.svg" alt="">
                                             <strong class="pt-4 fs-4">Normal (22.5 BMI)</strong>
                                             <p>BMI Status</p>
+                                            <button class="btn-outline-small gap-2">
+                                                Calculate
+                                                <svg class="spinner" viewBox="0 0 50 50">
+                                                    <circle class="path" cx="25" cy="25" r="20" fill="none"
+                                                        stroke-width="5" />
+                                                </svg>
+                                            </button>
                                         </div>
                                         <div
                                             class="box-stats p-3 flex-column align-items-center justify-content-center bg-calori">
@@ -980,6 +1043,129 @@
                                             <p>It looks like there aren't any deliveries listed at the moment!</p>
                                         </div>
                                     </div>
+
+                                    <!-- card -->
+                                    <div class="booking-card mt-4">
+                                        <div class="booking-info">
+                                            <h4>BOX-1</h4>
+                                            <p>Monday</p>
+                                        </div>
+                                        <div class="booking-meta">
+                                            <div class="meta-item">
+                                                <i class="ti ti-calendar-event"></i>
+                                                <span>14/04/2025</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="ti ti-clock-hour-10"></i>
+                                                <span>04:00pm - 5:00pm</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="ti ti-circle-check-filled text-success fs-2"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- card -->
+                                    <div class="booking-card mt-4">
+                                        <div class="booking-info">
+                                            <h4>BOX-2</h4>
+                                            <p>Tuesday</p>
+                                        </div>
+                                        <div class="booking-meta">
+                                            <div class="meta-item">
+                                                <i class="ti ti-calendar-event"></i>
+                                                <span>15/04/2025</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="ti ti-clock-hour-10"></i>
+                                                <span>04:00pm - 5:00pm</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="ti ti-circle-check-filled text-success fs-2"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- card -->
+                                    <div class="booking-card mt-4">
+                                        <div class="booking-info">
+                                            <h4>BOX-3</h4>
+                                            <p>Wednesday</p>
+                                        </div>
+                                        <div class="booking-meta">
+                                            <div class="meta-item">
+                                                <i class="ti ti-calendar-event"></i>
+                                                <span>16/04/2025</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="ti ti-clock-hour-10"></i>
+                                                <span>04:00pm - 5:00pm</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="ti ti-alarm-filled text-warning fs-2"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- card -->
+                                    <div class="booking-card mt-4">
+                                        <div class="booking-info">
+                                            <h4>BOX-4</h4>
+                                            <p>Thursday</p>
+                                        </div>
+                                        <div class="booking-meta">
+                                            <div class="meta-item">
+                                                <i class="ti ti-calendar-event"></i>
+                                                <span>17/04/2025</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="ti ti-clock-hour-10"></i>
+                                                <span>04:00pm - 5:00pm</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="ti ti-alarm-filled text-warning fs-2"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- card -->
+                                    <div class="booking-card mt-4">
+                                        <div class="booking-info">
+                                            <h4>BOX-5</h4>
+                                            <p>Friday</p>
+                                        </div>
+                                        <div class="booking-meta">
+                                            <div class="meta-item">
+                                                <i class="ti ti-calendar-event"></i>
+                                                <span>18/04/2025</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="ti ti-clock-hour-10"></i>
+                                                <span>04:00pm - 5:00pm</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="ti ti-alarm-filled text-warning fs-2"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- card -->
+                                    <div class="booking-card mt-4">
+                                        <div class="booking-info">
+                                            <h4>BOX-6</h4>
+                                            <p>Saturday</p>
+                                        </div>
+                                        <div class="booking-meta">
+                                            <div class="meta-item">
+                                                <i class="ti ti-calendar-event"></i>
+                                                <span>19/04/2025</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="ti ti-clock-hour-10"></i>
+                                                <span>04:00pm - 5:00pm</span>
+                                            </div>
+                                            <div class="meta-item">
+                                                <i class="ti ti-alarm-filled text-warning fs-2"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <!-- butto -->
                                     <div class="d-flex mt-4 light-bg">
                                         <a href="#" class="btn-fancy" data-bs-toggle="modal"
