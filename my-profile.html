@@ -18,6 +18,9 @@
     <!-- slider -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- datepicker -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
 <body>
@@ -165,8 +168,7 @@
                                     <div class="row">
                                         <div class="col-lg-8 d-flex flex-column gap-3">
                                             <!-- package 1 -->
-                                            <div
-                                                class="box-subscription d-flex flex-column flex-lg-row align-items-center">
+                                            <div class="box-subscription d-flex flex-column flex-lg-row">
                                                 <div class="card-meal">
                                                     <div class="over-lay">
                                                         <div>
@@ -220,6 +222,13 @@
                                                                 class="ti ti-player-stop-filled"></i>&nbsp;Stop</a>
                                                         <a href="#" class="btn-resume"><i
                                                                 class="ti ti-player-track-next"></i>&nbsp;Resume</a>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <div class="position-relative">
+                                                            <input type="text" id="datepicker" class="form-control"
+                                                                placeholder="Select Start date" />
+                                                            <i class="ti ti-calendar-event"></i>
+                                                        </div>
                                                     </div>
                                                     <div class="d-flex gap-2">
                                                         <a href="#" class="w-100 btn-outline"><i
@@ -869,11 +878,11 @@
                                         </div>
                                     </div>
                                     <div class="alert alert-warning text-center" role="alert">
-                                       Please note any changes made within 2 working days will not be updated on the current meal plan
+                                        Please note any changes made within 2 working days will not be updated on the
+                                        current meal plan
                                     </div>
                                 </div>
                             </div>
-
 
                             <!-- tab health Profile -->
                             <div class="tab-pane fade" id="my-health-profile-tab-pane" role="tabpanel"
@@ -1370,9 +1379,14 @@
     <!-- animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
-        AOS.init();
+        flatpickr("#datepicker", {
+            dateFormat: "d/m/Y",
+        });
     </script>
+
 
 </body>
 

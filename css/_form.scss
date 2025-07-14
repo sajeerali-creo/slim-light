@@ -231,3 +231,63 @@
         transform: translateX(22px);
     }
 }
+
+// radio
+.custom-radio {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+}
+
+.custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-radio::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+.custom-radio input:checked~.radio-label::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+// date picker
+/* Custom color for selected date */
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange,
+.flatpickr-day:hover {
+    background: #28a745 !important;
+    /* Change this to your preferred color */
+    color: #fff;
+    border: none;
+}
+
+.ti-calendar-event {
+    position: absolute;
+    right: 16px;
+    color: #00624a;
+    top: 14px;
+    font-size: 26px;
+}
