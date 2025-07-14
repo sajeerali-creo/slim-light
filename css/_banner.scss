@@ -6,6 +6,7 @@
 
     @media (min-width: 992px) {
         width: 60%;
+        margin-top: 48px;
     }
 
     @media (min-width: 1200px) {
@@ -81,6 +82,7 @@
     /* Full width */
     @media (min-width: 992px) {
         height: 760px;
+        object-fit: cover;
     }
 }
 
