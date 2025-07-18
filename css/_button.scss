@@ -372,3 +372,19 @@ a {
         width: 16px;
     }
 }
+
+.btn-download{
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid var(--primary);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    &:hover{
+        background-color: var(--primary);
+        color: var(--white);
+    }
+}

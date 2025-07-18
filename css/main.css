@@ -352,6 +352,22 @@ a:hover {
   width: 16px;
 }
 
+.btn-download {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+}
+.btn-download:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
 .abt-1 {
   width: 50%;
   overflow: hidden;
@@ -781,6 +797,7 @@ body {
 @media (min-width: 992px) {
   .carousel-caption {
     width: 60%;
+    margin-top: 48px;
   }
 }
 @media (min-width: 1200px) {
@@ -861,6 +878,8 @@ body {
 @media (min-width: 992px) {
   .carousel-item img {
     height: 760px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
