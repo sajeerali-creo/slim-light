@@ -584,22 +584,30 @@ a:hover {
 
 footer {
   background-color: var(--shade-5);
+  padding-top: 60px !important;
+}
+footer p {
+  font-size: 14px;
+}
+footer span {
+  font-size: 14px;
 }
 
 .app-icon img {
-  height: 60px;
+  height: 50px;
 }
 
 .links h5 {
   color: var(--white);
   font-weight: var(--600);
-  margin-bottom: 24px;
+  margin-bottom: 18px;
+  font-size: 18px;
 }
 .links a {
   color: var(--white);
   font-weight: var(--400);
   opacity: 0.6;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .sub-footer {
@@ -624,6 +632,9 @@ footer {
 }
 .sub-footer .social-media a:hover {
   opacity: 0.5;
+}
+.sub-footer .text-white {
+  font-size: 14px;
 }
 
 .padding-top {
@@ -1084,7 +1095,7 @@ body {
 
 .sig-box {
   width: 100%;
-  height: 376px;
+  height: 400px;
   border-radius: 20px;
   background-color: #f1f1f1;
   overflow: hidden;
@@ -1092,9 +1103,17 @@ body {
 }
 .sig-box img {
   width: 100%;
-  height: 376px;
+  height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.sig-box-details{
+  height: 600px;
+}
+.sig-box-details img{
+   height: 600px;
+   object-fit: cover;
+   width: 100%;
 }
 .sig-box .over-lay {
   width: 100%;
@@ -1115,7 +1134,7 @@ body {
 
 .team-box {
   width: 100%;
-  height: 397px;
+  height: auto;
   border-radius: 20px;
   background-color: var(--white);
   position: relative;
@@ -1123,9 +1142,9 @@ body {
 }
 .team-box img {
   width: 100%;
-  height: 397px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .team-box .team-details {
   width: 100%;
@@ -1761,11 +1780,11 @@ body {
   /* Scroll halfway through duplicated items */
 }
 .card img {
-  height: 400px;
+  height: auto;
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 10px 10px 0 0;
-  width: 70%;
+  width: 100%;
 }
 
 .card {
@@ -2217,3 +2236,11 @@ body {
     stroke-dashoffset: -124;
   }
 }/*# sourceMappingURL=main.css.map */
+
+#couponbtn{
+  width: 100px !important;
+}
+.btn-logout{
+  width: 56px !important;
+  height: 56px !important;
+}

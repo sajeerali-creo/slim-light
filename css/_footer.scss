@@ -1,23 +1,31 @@
 footer {
     background-color: var(--shade-5);
+    padding-top: 60px!important;
+    p{
+        font-size: 14px;
+    }
+    span{
+        font-size: 14px;
+    }
 }
 
 .app-icon img {
-    height: 60px;
+    height: 50px;
 }
 
 .links {
     h5 {
         color: var(--white);
         font-weight: var(--600);
-        margin-bottom: 24px;
+        margin-bottom: 18px;
+        font-size: 18px;
     }
 
     a {
         color: var(--white);
         font-weight: var(--400);
         opacity: 0.6;
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 
@@ -42,5 +50,8 @@ footer {
                 opacity: 0.5;
             }
         }
+    }
+    .text-white{
+        font-size: 14px;
     }
 }
