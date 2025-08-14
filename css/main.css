@@ -1357,6 +1357,8 @@ body {
 .main-tab-page .nav-tabs {
   flex-wrap: nowrap;
   white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 .main-tab-page .nav-tabs .nav-item {
   float: none;
@@ -1366,6 +1368,12 @@ body {
   min-width: 100px;
   /* adjust based on content */
   text-align: center;
+}
+
+@media (min-width: 992px) {
+  .main-tab-page .nav-tabs {
+    overflow-x: hidden;
+  }
 }
 
 .booking-card {
@@ -1809,14 +1817,6 @@ body {
   /* offset total spacing */
 }
 
-.client-logo-slider img {
-  max-height: 80px;
-  display: block;
-  margin: auto;
-  filter: grayscale(100%);
-  transition: 0.3s;
-}
-
 .client-logo-slider img:hover {
   filter: grayscale(0%);
 }
@@ -2052,6 +2052,7 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
   display: inline-block;
+  flex: 0 0 auto;
 }
 .product-book .radio-input:checked + .radio-label {
   background-color: var(--primary);
@@ -2243,4 +2244,35 @@ body {
 .btn-logout{
   width: 56px !important;
   height: 56px !important;
+}
+
+.sig-box-details{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.sig-box-details img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (min-width: 992px) {
+  .sig-box-details{
+    height: 600px;
+  }
+  .sig-box-details img{
+    height: 600px;
+    object-fit: cover;
+  }
+}
+
+.alert-warning{
+  background-color: #e6edeb !important;
+  border-color: #e6edeb !important;
+  color: #003229 !important;
 }
