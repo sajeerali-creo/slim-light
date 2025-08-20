@@ -1516,7 +1516,11 @@ body {
 }
 
 .target-bg {
-  background-color: #FCF4F0;
+  background-color: #fcfee9;
+}
+
+.target-bg2 {
+  background-color: #f3f8c1;
 }
 
 .bg-waiste {
@@ -1524,11 +1528,11 @@ body {
 }
 
 .bg-fat {
-  background-color: #F0EAF5;
+  background-color: #e6edeb;
 }
 
 .bg-bmi {
-  background-color: #F0EAF5;
+  background-color: #f3f4f4;
 }
 
 .bg-calori {

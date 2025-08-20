@@ -302,20 +302,23 @@
                                                 </div>
 
                                                 <!-- by default -->
-                                                 <div class="d-flex flex-column p-4 border rounded-3 text-center align-items-center justify-content-center mb-4">
+                                                <div
+                                                    class="d-flex flex-column p-4 border rounded-3 text-center align-items-center justify-content-center mb-4">
                                                     <i class="ti ti-receipt-off fs-2 text-dark d-block mb-4"></i>
                                                     <small class="opacity-50">No recipt available</small>
-                                                 </div>
+                                                </div>
                                                 <!-- recipt-1 -->
-                                                <div class="d-flex gap-3 border p-3 rounded-3 align-items-center justify-content-between mb-3">
+                                                <div
+                                                    class="d-flex gap-3 border p-3 rounded-3 align-items-center justify-content-between mb-3">
                                                     <div class="d-flex gap-3 align-items-center">
                                                         <i class="ti ti-receipt"></i>
                                                         <div>Name of the Recipt</div>
                                                     </div>
                                                     <a href="#" class="btn-download"><i class="ti ti-download"></i></a>
                                                 </div>
-                                                  <!-- recipt-2 -->
-                                                <div class="d-flex gap-3 border p-3 rounded-3 align-items-center justify-content-between mb-3">
+                                                <!-- recipt-2 -->
+                                                <div
+                                                    class="d-flex gap-3 border p-3 rounded-3 align-items-center justify-content-between mb-3">
                                                     <div class="d-flex gap-3 align-items-center">
                                                         <i class="ti ti-receipt"></i>
                                                         <div>Name of the Recipt</div>
@@ -958,6 +961,53 @@
                                         </div>
 
                                         <div class="w-100 box-stats p-5 target-bg flex-column">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="icon icon-tabler icons-tabler-outline icon-tabler-line-height">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                <path d="M3 8l3 -3l3 3" />
+                                                <path d="M3 16l3 3l3 -3" />
+                                                <path d="M6 5l0 14" />
+                                                <path d="M13 6l7 0" />
+                                                <path d="M13 12l7 0" />
+                                                <path d="M13 18l7 0" />
+                                            </svg>
+                                            <strong class="pt-4 fs-4">150 CM</strong>
+                                            <p>Current Height</p>
+                                            <a data-bs-toggle="modal" data-bs-target="#current-height"
+                                                class="btn-outline-small"><i class="ti ti-pencil"></i>&nbsp;Edit</a>
+                                        </div>
+                                         <!-- update current height -->
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="current-height" tabindex="-1"
+                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <div class="form">
+                                                            <label for="">Current Height</label>
+                                                            <input type="email" class="form-control w-100"
+                                                                id="exampleFormControlInput1" placeholder="CM">
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <div
+                                                            class="d-flex flex-column flex-lg-row justify-content-end gap-3 align-items-center">
+                                                            <a data-bs-dismiss="modal"
+                                                                class="btn-link w-100 w-lg-auto px-4">Cancel</a>
+                                                            <div class="d-flex light-bg w-100 w-lg-auto">
+                                                                <a href="#" class="btn-fancy w-100 w-lg-auto">
+                                                                    <span class="w-100 w-lg-auto">Update</span>
+                                                                    <i class="ti ti-arrow-up-right"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="w-100 box-stats p-5 target-bg2 flex-column">
                                             <img src="img/current-s.svg" alt="">
                                             <strong class="pt-4 fs-4">62.5 kg</strong>
                                             <p>Target Weight</p>
