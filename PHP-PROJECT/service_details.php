@@ -1,0 +1,85 @@
+<?php 
+include 'partials/header.php';
+
+if(isset($_REQUEST['id']) && $_REQUEST['id'] != ""){
+	$qry = $connection->query("SELECT * from `services` where id = '{$_GET['id']}' ");
+	foreach($qry->fetch_array() as $k => $v){
+		if(!is_numeric($k)){
+			$$k = $v;
+		}
+	}
+}
+else{
+    header('Location: '. ROOT_URL);
+    exit;
+}
+?>
+
+<!-- ===========BANNER=========== -->
+    <section class="inner-banner">
+    </section>
+
+    <!-- ===========SUBHEADER=========== -->
+    <section class="py-5 bg-inner-sub-head">
+        <div class="container">
+            <div class="d-flex flex-column flex-lg-row justify-content-between">
+                <div class="d-flex flex-column align-items-start">
+                    <h4 class="h2"><?php echo isset($title) ? $title : '' ?></h4>
+                </div>
+                <!-- <div>
+                    <div class="bredcums">
+                        <a href="/">Home</a>/ Our Services
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===========SIGNATURE DISH=========== -->
+    <section class="padding-bottom padding-top">
+        <div class="container">
+            <div class="row flex-column-reverse flex-lg-row">
+                 <div class="col-lg-8">
+                    <div class="min-height">
+                        <p><?= $description ? html_entity_decode($description) : '' ?></p>
+                    </div>
+                    <div class="d-flex light-bg">
+                        <?php if($button_label != ""){ ?>
+                                
+                                    <a href="<?= $button_link == "" ? ROOT_URL.'contact.php' : $button_link ?>" 
+                                    class="btn-fancy" 
+                                    id="dynamic-link" 
+                                    data-link="<?= $button_link ?>">
+
+                                        <span><?= $button_label ?></span>
+                                        <i class="ti ti-arrow-up-right"></i>
+                                    </a>
+                             
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function() {
+                                        var link = document.getElementById('dynamic-link');
+                                        var linkUrl = link.getAttribute('data-link');
+                                        if (linkUrl.toLowerCase().endsWith('.pdf')) {
+                                            link.setAttribute('target', '_blank');  
+                                        } else {
+                                            link.setAttribute('target', '_self');  
+                                        }
+                                    });
+                                </script>
+                            <?php } ?>
+                    </div>
+                </div>
+                <?php if($file_path != ''){ ?>
+                <div class="col-lg-4 mb-4">
+                    <div class="sig-box-details mb-4">
+                        <img src="<?= $file_path ? ADMIN_URL.$file_path : '' ?>" alt="">
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
+    </section>
+<?php
+include './partials/footer.php';
+?>
