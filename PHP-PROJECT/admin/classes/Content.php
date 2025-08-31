@@ -598,7 +598,7 @@ Class Content extends DBConnection {
 		extract($_POST);
 		$data = "";
 		foreach($_POST as $k => $v){
-			if(!in_array($k,array('id','description','old_file'))){
+			if(!in_array($k,array('id','description','old_file','icon_file'))){
 				if(!empty($data)) $data .= ", ";
 				$data .= "`$k` = '$v'";
 			}
@@ -612,6 +612,16 @@ Class Content extends DBConnection {
 				$data .=" , `file_path` = '{$fname}' ";
 			}
 		}
+
+		if(isset($_FILES['icon_img']) && !empty($_FILES['icon_img']['tmp_name'])){
+			$fname = 'uploads/'.time().'_'.$_FILES['icon_img']['name'];
+			$move2 = move_uploaded_file($_FILES['icon_img']['tmp_name'],base_app.$fname);
+			if($move2){
+				$data .=" , `icon_file_path` = '{$fname}' ";
+			}
+		}
+		// print_r($data);
+		// exit;
 		if(empty($id)){
 			$sql ="INSERT INTO services set $data";
 		}else{
@@ -623,6 +633,11 @@ Class Content extends DBConnection {
 			if(isset($move) && $move && !empty($old_file)){
 				if(is_file(base_app.$old_file))
 					unlink(base_app.$old_file);
+			}
+
+			if(isset($move2) && $move2 && !empty($icon_file)){
+				if(is_file(base_app.$icon_file))
+					unlink(base_app.$icon_file);
 			}
 			$resp['status']='success';
 			$resp['message']= " Service Details successfully ".$action;
@@ -835,27 +850,31 @@ Class Content extends DBConnection {
 		return json_encode($resp);
 
 	}
-	public function contact(){
-		extract($_POST);
-		$data = "";
-		foreach ($_POST as $key => $value) {
-			if(!empty($data)) $data .= ", ";
-				$data .= "('{$key}','{$value}')";
-		}
-		$this->conn->query("TRUNCATE `contacts`");
-		$sql = "INSERT INTO `contacts` (meta_field, meta_value) Values $data";
-		$qry = $this->conn->query($sql);
-		if($qry){
-			$resp['status']='success';
-			$resp['message']= " Contact Details successfully updated";
-			$this->settings->set_flashdata('success',$resp['message']);
-		}else{
-			$resp['status']='error';
-			$resp['message']= $sql;
-		}
-		return json_encode($resp);
-		exit;
-	}
+	public function general_details(){
+    // Clear table first
+    $this->conn->query("TRUNCATE `contacts`");
+
+    // Prepare statement
+    $stmt = $this->conn->prepare("INSERT INTO `contacts` (meta_field, meta_value) VALUES (?, ?)");
+
+    foreach ($_POST as $key => $value) {
+        $stmt->bind_param("ss", $key, $value);
+        $stmt->execute();
+    }
+
+    if ($stmt->affected_rows > 0) {
+        $resp['status'] = 'success';
+        $resp['message'] = "Contact Details successfully updated";
+        $this->settings->set_flashdata('success', $resp['message']);
+    } else {
+        $resp['status'] = 'error';
+        $resp['message'] = "Failed to update contact details.";
+    }
+
+    return json_encode($resp);
+    exit;
+}
+
 	public function message_delete(){
 		extract($_POST);
 		$qry = $this->conn->query("DELETE FROM messages where id = $id");
@@ -1013,8 +1032,8 @@ switch ($action) {
 	case 'message_delete':
 		echo $Content->message_delete();
 	break;
-	case 'contact':
-		echo $Content->contact();
+	case 'general_details':
+		echo $Content->general_details();
 	break;
 	case 'terms_conditions':
 		echo $Content->terms_conditions();

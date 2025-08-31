@@ -519,9 +519,9 @@ a:hover {
 }
 
 .inner-banner {
+  background-image: url(../img/banner.webp);
   height: 120px;
   background-position: center center;
-  background-color: #024739;
 }
 
 .bg-inner-sub-head {

@@ -33,6 +33,7 @@
         width: 100% !important;
         max-width: unset;
     }
+
     .modal-dialog.mid-large {
         width: 100% !important;
         max-width: unset;
@@ -150,4 +151,46 @@ nav#nav-wrap {
 
 nav#nav-wrap.opaque {
     background: #333;
+}
+
+.main-sidebar {
+    background-color: #024739 !important;
+}
+
+.layout-navbar-fixed .wrapper .sidebar-dark-primary .brand-link:not([class*="navbar"]) {
+    background-color: #024739 !important;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active,
+.sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+    background-color: #02362c !important;
+}
+
+.text-sm .nav-link {
+    padding: 10px 16px !important;
+}
+
+.btn-primary {
+    background-color: #024739 !important;
+    border-color: #024739 !important;
+}
+
+.card-primary.card-outline {
+    border-top: 3px solid #024739;
+}
+
+.page-item.active .page-link {
+    background-color: #024739 !important;
+    border-color: #024739 !important;
+}
+.navbar{
+    padding: 14px!important;
+}
+.text-sm .content-header{
+    padding: 32px 10px 16px!important;
+}
+.btn{
+    padding: 8px 24px !important;
 }

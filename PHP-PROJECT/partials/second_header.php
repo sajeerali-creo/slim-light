@@ -31,7 +31,7 @@ if (!isset($_SESSION['user']) && isset($_COOKIE['remember_token'])) {
     <!-- main font -->
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
     <!-- main style -->
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/core_11.css">
     <!-- animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- slider -->

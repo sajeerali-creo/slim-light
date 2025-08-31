@@ -13,7 +13,7 @@
 	<div class="card card-outline card-primary">
 		<div class="card-header">
 			<div class="card-tools">
-				<a class="btn btn-block btn-sm btn-default btn-flat border-primary new_coupon_code" href="javascript:void(0)"><i class="fa fa-plus"></i> Add New</a>
+				<a class="btn btn-primary new_coupon_code" href="javascript:void(0)"><i class="fa fa-plus"></i>&nbsp;Add New</a>
 			</div>
 		</div>
 		<div class="card-body">

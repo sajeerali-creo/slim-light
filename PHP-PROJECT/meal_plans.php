@@ -10,7 +10,7 @@ include 'partials/header.php'
         <div class="container">
             <div class="d-flex flex-column flex-lg-row justify-content-between">
                 <div class="d-flex flex-column align-items-start">
-                    <h4>Eat Better, Not Less!</h4>
+                    <h4 class="h2">Eat Better, Not Less!</h4>
                     <p>Leave Your Shopping, Cooking and Calorie Counting to us!</p>
                 </div>
                 <!-- <div>

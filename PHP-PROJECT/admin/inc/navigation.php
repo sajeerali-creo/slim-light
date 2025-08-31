@@ -31,7 +31,7 @@
                    <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-item dropdown">
                       <a href="./" class="nav-link nav-home">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="nav-icon ti ti-dashboard"></i>
                         <p>
                           Dashboard
                         </p>
@@ -40,7 +40,7 @@
                     <li class="nav-header">Contents</li>
                      <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>?page=banners" class="nav-link nav-meal-plans">
-                        <i class="nav-icon fas fa-cog"></i>
+                        <i class="nav-icon ti ti-picture-in-picture"></i>
                         <p>
                           Banners
                         </p>
@@ -48,7 +48,7 @@
                     </li>
                      <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>?page=home_page" class="nav-link nav-home_page">
-                        <i class="nav-icon fas fa-info-circle"></i>
+                        <i class="nav-icon ti ti-home"></i>
                         <p>
                           Home
                         </p>
@@ -56,7 +56,7 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>?page=about" class="nav-link nav-about">
-                        <i class="nav-icon fas fa-info-circle"></i>
+                        <i class="nav-icon ti ti-user"></i>
                         <p>
                           About
                         </p>
@@ -64,7 +64,7 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>?page=meal_plans" class="nav-link nav-meal-plans">
-                        <i class="nav-icon fas fa-cog"></i>
+                        <i class="nav-icon ti ti-play-card-1"></i>
                         <p>
                           Meal Plans
                         </p>
@@ -72,7 +72,7 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>?page=signature_dishes" class="nav-link nav-signature_dishes">
-                        <i class="nav-icon fas fa-cog"></i>
+                        <i class="nav-icon ti ti-bowl-spoon"></i>
                         <p>
                           Signature Dishes
                         </p>
@@ -80,7 +80,7 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>?page=success_stories" class="nav-link nav-success_stories">
-                        <i class="nav-icon fas fa-cog"></i>
+                        <i class="nav-icon ti ti-rosette-discount-check"></i>
                         <p>
                           Success Stories
                         </p>
@@ -88,7 +88,7 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>?page=services" class="nav-link nav-services">
-                        <i class="nav-icon fas fa-cog"></i>
+                        <i class="nav-icon ti ti-layout-dashboard"></i>
                         <p>
                           Services
                         </p>
@@ -96,7 +96,7 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>?page=blogs" class="nav-link nav-blogs">
-                        <i class="nav-icon fas fa-cog"></i>
+                        <i class="nav-icon ti ti-article"></i>
                         <p>
                           Blogs
                         </p>
@@ -104,7 +104,7 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>?page=clients" class="nav-link nav-clients">
-                        <i class="nav-icon fas fa-users"></i>
+                        <i class="nav-icon ti ti-square"></i>
                         <p>
                           Corporate Clients
                         </p>
@@ -112,7 +112,7 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>?page=testimonials" class="nav-link nav-testimonials">
-                        <i class="nav-icon fas fa-quote-left"></i>
+                        <i class="nav-icon ti ti-stars"></i>
                         <p>
                           Testimonials
                         </p>
@@ -120,23 +120,15 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>?page=coupon_codes" class="nav-link nav-coupon_codes">
-                        <i class="nav-icon fas fa-cog"></i>
+                        <i class="nav-icon ti ti-tag-starred"></i>
                         <p>
                           Coupon Codes
                         </p>
                       </a>
                     </li>
                     <li class="nav-item dropdown">
-                      <a href="<?php echo base_url ?>?page=contact" class="nav-link nav-contact">
-                        <i class="nav-icon fas fa-id-card"></i>
-                        <p>
-                          Contact
-                        </p>
-                      </a>
-                    </li>
-                    <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>?page=faqs" class="nav-link nav-faqs">
-                        <i class="nav-icon fas fa-question-circle"></i>
+                        <i class="nav-icon ti ti-help-hexagon"></i>
                         <p>
                           FAQs
                         </p>
@@ -144,7 +136,7 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>?page=terms_conditions" class="nav-link nav-terms_conditions">
-                        <i class="nav-icon fas fa-file-contract"></i>
+                        <i class="nav-icon ti ti-health-recognition"></i>
                         <p>
                           Terms & Conditions
                         </p>
@@ -152,7 +144,7 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>?page=privacy_policy" class="nav-link nav-privacy_policy">
-                        <i class="nav-icon fas fa-shield-alt"></i>
+                        <i class="nav-icon ti ti-alert-octagon"></i>
                         <p>
                           Privacy Policy
                         </p>
@@ -160,9 +152,17 @@
                     </li>
                     <li class="nav-item dropdown">
                       <a href="<?php echo base_url ?>?page=inquiries" class="nav-link nav-inquiries">
-                        <i class="nav-icon fas fa-envelope-open-text"></i>
+                        <i class="nav-icon ti ti-list"></i>
                         <p>
                           Inquiries
+                        </p>
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a href="<?php echo base_url ?>?page=general_details" class="nav-link nav-general_details">
+                        <i class="nav-icon ti ti-file-description"></i>
+                        <p>
+                          General Details
                         </p>
                       </a>
                     </li>

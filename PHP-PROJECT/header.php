@@ -51,7 +51,7 @@ if (isset($_SESSION['user'])) {
     <!-- main font -->
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
     <!-- main style -->
-    <link rel="stylesheet" href="css/core_11.css">
+    <link rel="stylesheet" href="css/core_5.css">
     <!-- animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- slider -->
@@ -96,7 +96,7 @@ if (isset($_SESSION['user'])) {
                        
                         <a href="<?= ROOT_URL ?>profile.php">
                              <?php
-                        $base64img = $profilePicture != null ? $profilePicture : ROOT_URL.'img/defaultimagex2.webp';
+                        $base64img = $profilePicture != null ? $profilePicture : ROOT_URL.'/img/defaultImg.jpg';
                             if($profilePicture != null){ ?>
                                 <img src="data:image/jpeg;base64,<?= $base64img ?>" alt="">
                             <?php }else{ ?>

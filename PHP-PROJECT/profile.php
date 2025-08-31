@@ -111,7 +111,7 @@ $errors = [];
                     <div class="d-flex gap-4 align-items-center ">
                         <div class="user-profile mb-4 mb-lg-0">
                             <?php
-                            $base64img = $profilePicture != null ? $profilePicture : ROOT_URL.'/img/defaultImg.jpg';
+                            $base64img = $profilePicture != null ? $profilePicture : ROOT_URL.'img/defaultimagex2.webp';
                             if($profilePicture != null){ ?>
                                 <img src="data:image/jpeg;base64,<?= $base64img ?>" alt="">
                             <?php }else{ ?>
@@ -128,10 +128,15 @@ $errors = [];
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="d-flex gap-2">
+<div>
                     <a href="<?= ROOT_URL ?>account_settings.php" class="btn-first w-auto px-4 gap-2"><i class="ti ti-settings"></i>Account
                         Settings</a>
                 </div>
+                <a href="<?= ROOT_URL ?>logout.php" class="btn-first w-auto px-4">Logout</a>
+                </div>
+                
+
             </div>
         </div>
     </section>

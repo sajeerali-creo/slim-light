@@ -141,7 +141,7 @@ $gallery_dir = ADMIN_UPLOAD_URL . "meal_gallery/";
                 </div>
                 <div class="col-lg-5">
                     <h4>About the Plan</h4>
-                    <h2 class="h2"><?php echo isset($title) ? $title : '' ?></h2>
+                    <h2 class="h2 text-brand"><?php echo isset($title) ? $title : '' ?></h2>
                     <p><?php echo (isset($description)) ? html_entity_decode(($description)) : '' ?></p>
                     <div class="d-flex mt-5 light-bg">
                         <button type="button" class="btn-fancy" id="get-started-btn">

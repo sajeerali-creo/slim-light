@@ -7,7 +7,7 @@
 	<div class="card card-outline card-primary">
 		<div class="card-header">
 			<div class="card-tools">
-				<a class="btn btn-block btn-sm btn-default btn-flat border-primary new_banner" href="javascript:void(0)"><i class="fa fa-plus"></i> Add New</a>
+				<a class="btn btn-primary new_banner" href="javascript:void(0)"><i class="fa fa-plus"></i>&nbsp;Add New</a>
 			</div>
 		</div>
 		<div class="card-body">
@@ -37,11 +37,11 @@
 						<tr>
 							<th class="text-center"><?php echo $i++ ?></th>
 							<td class='text-center'>
-								<img src="<?php echo validate_image($row['file_path']) ?>" alt="Image"  style="object-fit:scale-down;object-position:center center;border-radius: 50%;height: auto;max-width: 55%;" class="img-thumbnail">
+								<img src="<?php echo validate_image($row['file_path']) ?>" alt="Image"  style="object-fit:scale-down;object-position:center center;border-radius: 8px;height: auto;max-width: 55%;" class="img-thumbnail">
 							</td>
 							<td><b class=""><?php echo ucwords($row['heading']) ?></b></td>
 							<td class="text-center">
-								<div class="btn-group">
+								<div class="btn-group d-flex" style="gap:8px;">
 									<a href="javascript:void(0)" data-id='<?php echo $row['id'] ?>' class="btn btn-primary btn-flat btn-sm manage_banner">
 									<i class="fas fa-edit"></i>
 									</a>

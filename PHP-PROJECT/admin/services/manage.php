@@ -20,6 +20,21 @@ if(isset($_GET['id'])){
 		</div>
 		<div class="card-body">
 			<form id="service">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="" class="control-label">Icon</label>
+							<div class="custom-file">
+								<input type="hidden" name="icon_file" value="<?php echo isset($icon_file_path) ? $icon_file_path :'' ?>">
+							<input type="file" class="custom-file-input rounded-circle" id="customIconFile" name="icon_img" onchange="iconDisplayImg(this,$(this))">
+							<label class="custom-file-label" for="customFile">Choose file</label>
+							</div>
+						</div>
+						<div class="form-group d-flex justify-content-center">
+							<img src="<?php echo validate_image(isset($icon_file_path) ? $icon_file_path :'') ?>" alt="" id="iconcimg" class="img-fluid img-thumbnail">
+						</div>
+					</div>
+				</div>
 				<div class="row" class="details">
 					<input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
 					<div class="col-sm-6">
@@ -48,6 +63,7 @@ if(isset($_GET['id'])){
 							</div>
 						</div>
 						<div class="form-group d-flex justify-content-center">
+							<?php ?>
 							<img src="<?php echo validate_image(isset($file_path) ? $file_path :'') ?>" alt="" id="cimg" class="img-fluid img-thumbnail">
 						</div>
 					</div>
@@ -81,6 +97,12 @@ if(isset($_GET['id'])){
 		object-fit:scale-down;
 		object-position:center center;
 	}
+	img#iconcimg{
+		height: 30vh;
+		width: 100%;
+		object-fit:scale-down;
+		object-position:center center;
+	}
 </style>
 <script>
 function displayImg(input,_this) {
@@ -92,7 +114,8 @@ function displayImg(input,_this) {
 
 	        reader.readAsDataURL(input.files[0]);
 	    }
-	}
+}
+
 	$(document).ready(function(){
 		$('.select')
 		$('#service').submit(function(e){
@@ -139,5 +162,15 @@ function displayImg(input,_this) {
 		        ]
 		    })
 	})
-	
+
+function iconDisplayImg(input,_this) {
+	    if (input.files && input.files[0]) {
+	        var reader = new FileReader();
+	        reader.onload = function (e) {
+	        	$('#iconcimg').attr('src', e.target.result);
+	        }
+
+	        reader.readAsDataURL(input.files[0]);
+	    }
+}
 </script>

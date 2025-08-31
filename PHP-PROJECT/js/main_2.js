@@ -63,6 +63,7 @@ $(document).ready(function () {
         dots: false,
         pauseOnHover: false,
         infinite: true
+
     });
 });
 $(document).ready(function () {
@@ -74,6 +75,20 @@ $(document).ready(function () {
         arrows: false,
         dots: false,
         pauseOnHover: false,
-        infinite: true
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 768, // tablet and below
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 480, // mobile
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 });
