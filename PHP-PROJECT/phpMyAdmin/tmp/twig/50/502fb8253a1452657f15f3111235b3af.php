@@ -586,6 +586,6 @@ yield _gettext("These functions are meant to return a binary result; to avoid in
 
     public function getSourceContext()
     {
-        return new Source("", "javascript/variables.twig", "/home/u128863200/domains/virammarines.com/public_html/creator/phpMyAdmin/templates/javascript/variables.twig");
+        return new Source("", "javascript/variables.twig", "/home/u128863200/domains/talentgate.in/public_html/live/creators/phpMyAdmin/templates/javascript/variables.twig");
     }
 }

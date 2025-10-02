@@ -192,6 +192,6 @@ yield _gettext("Git information missing!");
 
     public function getSourceContext()
     {
-        return new Source("", "footer.twig", "/home/u128863200/domains/virammarines.com/public_html/creator/phpMyAdmin/templates/footer.twig");
+        return new Source("", "footer.twig", "/home/u128863200/domains/talentgate.in/public_html/live/creators/phpMyAdmin/templates/footer.twig");
     }
 }

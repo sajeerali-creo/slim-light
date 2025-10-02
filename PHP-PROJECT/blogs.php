@@ -10,13 +10,11 @@ include 'partials/header.php'
         <div class="container">
             <div class="d-flex flex-column flex-lg-row justify-content-between">
                 <div class="d-flex flex-column align-items-start">
-                    <h4 class="h2">Blogs</h4>
+                    <h4 class="h2 text-white">Blogs</h4>
                 </div>
-                <!-- <div>
-                    <div class="bredcums">
-                        <a href="<?= ROOT_URL ?>">Home</a>/ blogs
-                    </div>
-                </div> -->
+                <div>
+                <a class="btn-outline btn-back" href="<?= ROOT_URL ?>">Back</a>
+            </div>
             </div>
         </div>
     </section>
@@ -48,7 +46,6 @@ include 'partials/header.php'
                         <div class="d-flex light-bg">
                             <a href="<?= ROOT_URL ?>blog_details.php?id=<?= $result['id']; ?>" class="btn-fancy">
                                 <span>Read More</span>
-                                <i class="ti ti-arrow-up-right"></i>
                             </a>
                         </div>
                     </div>

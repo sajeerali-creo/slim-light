@@ -27,7 +27,7 @@ while ($row = $query->fetch_assoc()) {
                     </a>
                 </div>
             </div>
-            <div class="col-lg-7">
+            <div class="col-lg-7 d-none d-lg-block">
                 <div class="row links">
                     <div class="col-lg-4  mb-5 mb-lg-0">
                         <h5>Quicklinks</h5>
@@ -78,7 +78,7 @@ while ($row = $query->fetch_assoc()) {
                     <a target="_blank" href="https://www.linkedin.com/company/blite-uae/"><i
                             class="ti ti-brand-linkedin"></i></a>
                     <a target="_blank" href="https://www.threads.com/@blite.uae"><i class="ti ti-brand-threads"></i></a>
-                    <a target="_blank" href="https://api.whatsapp.com/send?phone=971588052025"><i
+                    <a target="_blank" href="https://api.whatsapp.com/send?phone=+971588052025"><i
                             class="ti ti-brand-whatsapp"></i></a>
                 </div>
             </div>
@@ -164,6 +164,137 @@ while ($row = $query->fetch_assoc()) {
     $(function () {
         $("#copyYear").text(new Date().getFullYear());
     });
+</script>
+<script>
+    // Small JS to pause video when not visible (saves CPU)
+    (function () {
+        const video = document.getElementById('heroVideo');
+        const bg = document.getElementById('heroBg');
+
+        // If touch device, prefer background image (saves mobile data)
+        const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+        if (isTouch) {
+            if (video) video.style.display = 'none';
+            if (bg) bg.style.display = 'block';
+            return;
+        }
+
+        // IntersectionObserver pauses video when out of view
+        if ('IntersectionObserver' in window && video) {
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (e.isIntersecting) {
+                        // try to play (some browsers require user gesture; it's muted so usually allowed)
+                        video.play().catch(() => {/* ignore */ });
+                    } else {
+                        video.pause();
+                    }
+                });
+            }, { threshold: 0.25 });
+            io.observe(video);
+        }
+
+        // If video fails to load, show poster bg
+        video.addEventListener('error', () => {
+            video.style.display = 'none';
+            if (bg) bg.style.display = 'block';
+        });
+    })();
+</script>
+
+<script>
+    const mainImage = document.getElementById('mainImage');
+    const mainTitle = document.getElementById('mainTitle');
+    const mainDesc = document.getElementById('mainDesc');
+    const cards = Array.from(document.querySelectorAll('.product-card'));
+
+    let currentIndex = 0;
+    let autoSlideInterval;
+
+    // function to show a card’s data with fade
+    function showCardData(card) {
+        mainImage.style.opacity = 0;
+        mainTitle.style.opacity = 0;
+        mainDesc.style.opacity = 0;
+
+        setTimeout(() => {
+            mainImage.src = card.dataset.image;
+            mainTitle.textContent = card.dataset.title;
+            mainDesc.textContent = card.dataset.desc;
+
+            mainImage.style.opacity = 1;
+            mainTitle.style.opacity = 1;
+            mainDesc.style.opacity = 1;
+        }, 400); // match CSS transition time
+    }
+
+    // auto slide
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            currentIndex = (currentIndex + 1) % cards.length;
+            showCardData(cards[currentIndex]);
+        }, 5000); // 5 seconds per slide
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+
+    // manual click overrides auto
+    cards.forEach((card, index) => {
+        card.addEventListener('click', () => {
+            stopAutoSlide();
+            currentIndex = index;
+            showCardData(card);
+        });
+    });
+
+    // start slider
+    startAutoSlide();
+</script>
+
+<script>
+    // Wait 3 seconds, then hide the div
+    setTimeout(() => {
+        document.getElementById("notice").classList.add("hide");
+    }, 3000);
+</script>
+
+<script>
+  $(function () {
+    function setupDrawer(triggerSelector, drawerSelector) {
+      const $trigger = $(triggerSelector);
+      const $drawer = $trigger.next(drawerSelector);
+
+      $drawer.hide();
+
+      $trigger.on('click', function (e) {
+        e.preventDefault();
+        const $this = $(this); // the clicked trigger
+        const $thisDrawer = $this.next(drawerSelector);
+
+        // toggle this drawer
+        $thisDrawer.stop(true, true).slideToggle(200);
+
+        // toggle active class on this trigger
+        $this.toggleClass("active");
+      });
+
+      // click outside closes drawer
+      $(document).on('click', function (e) {
+        if (
+          !$trigger.is(e.target) &&
+          !$drawer.is(e.target) &&
+          $drawer.has(e.target).length === 0
+        ) {
+          $drawer.slideUp(200);
+          $trigger.removeClass("active"); // remove active class when closed
+        }
+      });
+    }
+
+    setupDrawer('.drawer-trigger', '.drawer');
+  });
 </script>
 
 

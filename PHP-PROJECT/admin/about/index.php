@@ -51,27 +51,31 @@ $qry = $conn->query("SELECT * from `about_us`");
 						
 						<div class="row">
 					<div class="col-md-12">
-						<label class="control-label">Team Images</label>
-						<input type="file" name="gallery_imgs[]" multiple class="form-control" id="gallery-input">
-						<input type="hidden" name="deleted_gallery_names" id="deleted_gallery_names">
-						<div class="row mt-3" id="gallery-wrapper">
+						<label class="control-label">Team Details</label>
+						<input type="file" name="gallery_2_imgs[]" id="gallery-2-input" multiple class="form-control">
+						<input type="hidden" name="deleted_gallery_2_names" id="deleted_gallery_2_names">
+						<div class="row mt-3" id="gallery-2-container">
 							<?php 
-							$gallery_list = [];
+							$gallery_2 = [];
+							$gallery_dir = base_app . "uploads/team_gallary/";
+							$gallery_url = base_url . "uploads/team_gallary/";
 							if (isset($id)) {
-								$gallery_dir = base_app . "uploads/team_gallary/";
-								$gallery_url = base_url . "uploads/team_gallary/";
-
-								$q = $conn->query("SELECT gallery_images FROM about_us WHERE id = {$id}");
-								if ($q && $q->num_rows > 0) {
-									$gallery_images = $q->fetch_assoc()['gallery_images'];
-									$gallery_list = explode(',', $gallery_images);
-
-									foreach ($gallery_list as $file) {
-										if (empty($file)) continue;
+								$res = $conn->query("SELECT gallery_images FROM about_us WHERE id = {$id}");
+								if ($res && $res->num_rows > 0) {
+									$data = $res->fetch_assoc();
+									$gallery_2 = array_filter(explode('$$', $data['gallery_images']));
+									// print_r($gallery_2);
+									foreach ($gallery_2 as $index => $item) {
+										[$img, $title, $designation, $description] = array_pad(explode('::', $item, 4), 4, '');
 										?>
-										<div class="col-md-2 mb-2 position-relative preview-img-item" id="gallery-img-<?php echo $file ?>">
-											<img src="<?php echo $gallery_url . $file ?>" class="img-thumbnail" style="height:150px;width:160px">
-											<button type="button" class="btn btn-sm btn-danger position-absolute top-0 end-0" onclick="delete_gallery_image('<?php echo $file ?>')">&times;</button>
+										<div class="col-md-6 gallery-img-box" data-filename="<?= $img ?>">
+											<img src="<?= $gallery_url . $img ?>" class="img-thumbnail mb-1" style="height:130px;">
+											<input type="text" class="form-control form-control-sm mb-1" name="gallery_2_titles_existing[<?= $img ?>]" placeholder="Name Of dietion" value="<?= htmlspecialchars($title) ?>">
+											<input type="text" class="form-control form-control-sm mb-1" name="gallery_2_designation_existing[<?= $img ?>]" placeholder="Designation" value="<?= htmlspecialchars($designation) ?>">
+											<textarea name="single_team_detail_existing[<?= $img ?>]" class="form-control singleteamdetaileditor" rows="6">
+												<?php echo (isset($description)) ? html_entity_decode(($description)) : ''; ?>
+											</textarea>
+											<button type="button" class="btn btn-sm btn-danger" onclick="deleteExistingGallery2('<?= $img ?>')">Delete</button>
 										</div>
 										<?php
 									}
@@ -165,11 +169,11 @@ $qry = $conn->query("SELECT * from `about_us`");
 	}
 
 	// On form submit, only send selected files
-	$('form').on('submit', function () {
-		const dt = new DataTransfer();
-		selectedGalleryFiles.forEach(obj => dt.items.add(obj.file));
-		document.getElementById('gallery-input').files = dt.files;
-	});
+	// $('form').on('submit', function () {
+	// 	const dt = new DataTransfer();
+	// 	selectedGalleryFiles.forEach(obj => dt.items.add(obj.file));
+	// 	document.getElementById('gallery-input').files = dt.files;
+	// });
 
 </script>
 <script>
@@ -278,6 +282,20 @@ $(document).ready(function() {
 		            [ 'view', [ 'link','undo', 'redo', 'fullscreen', 'codeview', 'help' ] ]
 		        ]
 		    })
+
+		    $('.singleteamdetaileditor').summernote({
+		        height: 200,
+		        toolbar: [
+		            [ 'style', [ 'style' ] ],
+		            [ 'font', [ 'bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'clear'] ],
+		            [ 'fontname', [ 'fontname' ] ],
+		            [ 'fontsize', [ 'fontsize' ] ],
+		            [ 'color', [ 'color' ] ],
+		            [ 'para', [ 'ol', 'ul', 'paragraph', 'height' ] ],
+		            [ 'table', [ 'table' ] ],
+		            [ 'view', [ 'link','undo', 'redo', 'fullscreen', 'codeview', 'help' ] ]
+		        ]
+		    })
     // Function to handle image upload
     function sendFile(file, editor) {
         var data = new FormData();
@@ -305,4 +323,62 @@ $(document).ready(function() {
     }
 });
 	
+</script>
+<script>
+function deleteExistingGallery2(img) {
+    if (confirm("Remove this image?")) {
+        const container = document.querySelector(`.gallery-img-box[data-filename="${img}"]`);
+        container.remove();
+
+        const hiddenInput = document.getElementById("deleted_gallery_2_names");
+        let names = hiddenInput.value ? hiddenInput.value.split(',') : [];
+        if (!names.includes(img)) names.push(img);
+        hiddenInput.value = names.join(',');
+    }
+}
+document.getElementById('gallery-2-input').addEventListener('change', function(e) {
+    const previewContainer = document.getElementById('gallery-2-container');
+    
+    for (let i = 0; i < this.files.length; i++) {
+        const file = this.files[i];
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const box = document.createElement('div');
+            box.classList.add('col-md-6', 'gallery-img-box', 'mb-3');
+
+            box.innerHTML = `
+                <img src="${e.target.result}" class="img-thumbnail mb-1" style="height:130px;">
+                <input type="text" name="gallery_2_titles[]" class="form-control form-control-sm mb-1" placeholder="Name Of dietion">
+				<input type="text" name="gallery_2_designation[]" class="form-control form-control-sm mb-1" placeholder="Designation">
+				<textarea name="single_team_detail[]" class="form-control singleteamdetaileditor" rows="6"></textarea>
+                <button type="button" class="btn btn-sm btn-danger remove-gallery-img">Delete</button>
+            `;
+
+            // Attach delete button handler
+            box.querySelector('.remove-gallery-img').addEventListener('click', function() {
+                box.remove(); // Remove the entire preview box
+            });
+
+            previewContainer.appendChild(box);
+			
+	$('.singleteamdetaileditor').summernote({
+		        height: 200,
+		        toolbar: [
+		            [ 'style', [ 'style' ] ],
+		            [ 'font', [ 'bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'clear'] ],
+		            [ 'fontname', [ 'fontname' ] ],
+		            [ 'fontsize', [ 'fontsize' ] ],
+		            [ 'color', [ 'color' ] ],
+		            [ 'para', [ 'ol', 'ul', 'paragraph', 'height' ] ],
+		            [ 'table', [ 'table' ] ],
+		            [ 'view', [ 'link','undo', 'redo', 'fullscreen', 'codeview', 'help' ] ]
+		        ]
+		    })
+        };
+
+        reader.readAsDataURL(file);
+    }
+
+});
 </script>

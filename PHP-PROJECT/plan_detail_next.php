@@ -706,7 +706,6 @@ function detect_card_type($card_number) {
                                             <span id="payamountid">
                                                 <svg id="payloader" class="button-spinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5" /></svg> 
                                                 Pay AED <?= $subtotal ?></span>
-                                            <i class="ti ti-arrow-up-right"></i>
                                         </button>
                                     </div>
                                 </div>

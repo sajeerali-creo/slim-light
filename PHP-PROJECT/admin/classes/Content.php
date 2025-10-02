@@ -25,6 +25,7 @@ Class Content extends DBConnection {
 	}
 	public function about_us(){
 		extract($_POST);
+		
 		$data = "";
 		// $skip_fields = [
 		// 	'id', 'file','section_1_content','section_1_content','section_2_content','section_3_content',
@@ -33,7 +34,7 @@ Class Content extends DBConnection {
 		// ];
 		$skip_fields = [
 			'id','file','section_1_content','section_2_content','section_3_content',
-			'deleted_gallery_names', 'existing_gallery'
+			'deleted_gallery_2_names', 'existing_gallery_2',
 		];
 			foreach ($_POST as $k => $v) {
 			// Skip known array or special fields
@@ -77,44 +78,75 @@ Class Content extends DBConnection {
 		$gallery_dir = base_app . "uploads/team_gallary/";
 		if (!is_dir($gallery_dir)) mkdir($gallery_dir, 0777, true);
 
-				/*  ------------ Start gallary 1 code -------------*/
-				// Get current images from DB
-				$existing_gallery = [];
-				$q = $this->conn->query("SELECT gallery_images FROM about_us WHERE id = {$last_id}");
-				if ($q && $q->num_rows > 0) {
-					$existing_gallery = array_filter(explode(',', $q->fetch_assoc()['gallery_images']));
-				}
-				// Get deleted image names from POST
-				$deleted_gallery = isset($_POST['deleted_gallery_names']) ? array_map('trim', explode(',', $_POST['deleted_gallery_names'])) : [];
-				// Remove deleted images gallary 1
-				foreach ($deleted_gallery as $img) {
-					$img = basename($img);
-					$img_path = $gallery_dir . $img;
+		
+		/*------------------ Start team gallary 2-----------------------*/
+	
+			// Load existing gallery
+			$existing_gallery_2 = [];
+			$res = $this->conn->query("SELECT gallery_images FROM about_us WHERE id = {$last_id}");
+			if ($res && $res->num_rows) {
+			    $data = $res->fetch_assoc();
+			    $existing_gallery_2 = array_filter(explode('$$', $data['gallery_images']));
+			}
 
-					// 1. Delete the physical file
-					if ($img && file_exists($img_path) && is_file($img_path)) {
-						unlink($img_path);
+			$deleted_gallery_2 = array_filter(
+			    explode(',', $_POST['deleted_gallery_2_names'] ?? ''),
+			    fn($v) => trim($v) !== ''
+			);
+
+
+			foreach ($deleted_gallery_2 as $del_img) {
+		    $del_img = trim($del_img);
+		    $img_name = explode('::', $del_img)[0];  // In case it's with title
+
+		    $img_path = $gallery_dir . $img_name;
+		    if (is_file($img_path)) {
+		        unlink($img_path);
+		    }
+
+		    // Remove matching image from existing_gallery_2
+		    $existing_gallery_2 = array_filter($existing_gallery_2, function($item) use ($img_name) {
+		        return strpos($item, $img_name) !== 0 ? true : false;
+		    });
+			}
+
+			// Upload new images with title
+			$new_gallery_2 = [];
+			if (!empty($_FILES['gallery_2_imgs']['tmp_name'][0])) {
+				foreach ($_FILES['gallery_2_imgs']['tmp_name'] as $i => $tmp) {
+					$new_name = uniqid('img_', true) . "_" . basename($_FILES['gallery_2_imgs']['name'][$i]);
+					$title = trim($_POST['gallery_2_titles'][$i] ?? '');
+					$designation = trim($_POST['gallery_2_designation'][$i] ?? '');
+					//$description = addslashes(htmlentities($_POST['single_team_detail'][$i])) ?? '';
+					$description = addslashes(htmlentities($_POST['single_team_detail'][$i] ?? '', ENT_QUOTES, 'UTF-8'));
+					if (move_uploaded_file($tmp, $gallery_dir . $new_name)) {
+						$new_gallery_2[] = $new_name . (!empty($title) ? "::" . $title : '') . (!empty($designation) ? "::" . $designation : '') . (!empty($description) ? "::" . $description : '');
 					}
-
-					// 2. Remove from $existing_gallery array
-					$existing_gallery = array_diff($existing_gallery, [$img]);
 				}
-				// Upload new images
-				if (!empty($_FILES['gallery_imgs']['tmp_name'][0])) {
-					foreach ($_FILES['gallery_imgs']['tmp_name'] as $key => $tmp_name) {
-						$new_name = uniqid('img_', true) . "_" . basename($_FILES['gallery_imgs']['name'][$key]);
-						if (move_uploaded_file($tmp_name, $gallery_dir . $new_name)) {
-							$existing_gallery[] = $new_name;
-						}
-					}
-				}
-				// Save updated image list to DB
-				$gallery_field = implode(',', $existing_gallery);
+			}
 
-		/*------------------ End gallary 1-----------------------*/
+			// Update titles of existing images
+			if (isset($_POST['gallery_2_titles_existing'])) {
+				foreach ($existing_gallery_2 as $i => $entry) {
+					[$img] = explode('::', $entry);
+					$title = trim($_POST['gallery_2_titles_existing'][$img] ?? '');
+					$designation = trim($_POST['gallery_2_designation_existing'][$img] ?? '');
+					//$description = addslashes(htmlentities($_POST['single_team_detail_existing'][$img])) ?? '';
+					$description = addslashes(htmlentities($_POST['single_team_detail_existing'][$img] ?? '', ENT_QUOTES, 'UTF-8'));
+					$existing_gallery_2[$i] = $img . (!empty($title) ? "::" . $title : '') . (!empty($designation) ? "::" . $designation : '') . (!empty($description) ? "::" . $description : '');
+				}
+			}
 
 		
-		$this->conn->query("UPDATE about_us SET gallery_images = '{$gallery_field}'  WHERE id = {$last_id}");
+			// Final merge and save
+			$final_gallery_2 = array_merge($existing_gallery_2, $new_gallery_2);
+			//$this->conn->query("UPDATE about_us SET gallery_images = '" . implode(',', $final_gallery_2) . "' WHERE id = {$last_id}");
+
+
+		/*--------------------- End team gallery 2 ------------------*/
+		
+		$this->conn->query("UPDATE about_us SET gallery_images = '" . implode('$$', $final_gallery_2) . "' WHERE id = {$last_id}");
+		//$this->conn->query("UPDATE about_us SET gallery_images = '{$gallery_field}'  WHERE id = {$last_id}");
 
 
 		$action = empty($id) ? "added":"updated";
@@ -132,6 +164,7 @@ Class Content extends DBConnection {
 			$resp['error']= $this->conn->error;
 			$resp['message']= " error:".$sql;
 		}
+		
 		return json_encode($resp);
 		exit;
 	}

@@ -72,6 +72,6 @@ class __TwigTemplate_a247f26b8c360ecb3c70fb05d9d878e4 extends Template
 
     public function getSourceContext()
     {
-        return new Source("", "login/footer.twig", "/home/u128863200/domains/virammarines.com/public_html/creator/phpMyAdmin/templates/login/footer.twig");
+        return new Source("", "login/footer.twig", "/home/u128863200/domains/talentgate.in/public_html/live/creators/phpMyAdmin/templates/login/footer.twig");
     }
 }

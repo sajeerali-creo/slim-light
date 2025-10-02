@@ -24,13 +24,11 @@ else{
         <div class="container">
             <div class="d-flex flex-column flex-lg-row justify-content-between">
                 <div class="d-flex flex-column align-items-start">
-                    <h4 class="h2"><?php echo isset($title) ? $title : '' ?></h4>
+                    <h4 class="h2 text-white"><?php echo isset($title) ? $title : '' ?></h4>
                 </div>
-                <!-- <div>
-                    <div class="bredcums">
-                        <a href="/">Home</a>/ Our Services
-                    </div>
-                </div> -->
+                     <div>
+                <a class="btn-outline btn-back" href="<?= ROOT_URL ?>">Back</a>
+            </div>
             </div>
         </div>
     </section>
@@ -39,8 +37,9 @@ else{
     <!-- ===========SIGNATURE DISH=========== -->
     <section class="padding-bottom padding-top">
         <div class="container">
-            <div class="row flex-column-reverse flex-lg-row">
-                 <div class="col-lg-8">
+            <div class="row flex-lg-row">
+                
+                 <div class="col-lg-7">
                     <div class="min-height">
                         <p><?= $description ? html_entity_decode($description) : '' ?></p>
                     </div>
@@ -53,7 +52,6 @@ else{
                                     data-link="<?= $button_link ?>">
 
                                         <span><?= $button_label ?></span>
-                                        <i class="ti ti-arrow-up-right"></i>
                                     </a>
                              
                                 <script>
@@ -70,13 +68,15 @@ else{
                             <?php } ?>
                     </div>
                 </div>
-                <?php if($file_path != ''){ ?>
-                <div class="col-lg-4 mb-4">
+
+                 <?php if($file_path != ''){ ?>
+                <div class="col-lg-5 mb-4">
                     <div class="sig-box-details mb-4">
                         <img src="<?= $file_path ? ADMIN_URL.$file_path : '' ?>" alt="">
                     </div>
                 </div>
                 <?php } ?>
+               
             </div>
         </div>
     </section>

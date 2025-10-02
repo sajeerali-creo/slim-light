@@ -139,6 +139,6 @@ class __TwigTemplate_cc92a01cffb00f57884f4f895e81969b extends Template
 
     public function getSourceContext()
     {
-        return new Source("", "scripts.twig", "/home/u128863200/domains/virammarines.com/public_html/creator/phpMyAdmin/templates/scripts.twig");
+        return new Source("", "scripts.twig", "/home/u128863200/domains/talentgate.in/public_html/live/creators/phpMyAdmin/templates/scripts.twig");
     }
 }

@@ -121,8 +121,7 @@ while($result=mysqli_fetch_array($system_query)){
                             <a href="<?= ROOT_URL ?>forgot.php" class="text-brand">Forgot password?</a>
                         </div>
                         <div class="d-flex mt-5 light-bg">
-                            <button type="submit" name="submit" class="btn-fancy"><span><svg id="loader" class="button-spinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5" /></svg>Sign In</span>
-                                <i class="ti ti-arrow-up-right"></i></button>
+                            <button type="submit" name="submit" class="btn-fancy"><span><svg id="loader" class="button-spinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5" /></svg>Sign In</span></button>
                             
                         </div>
                     </div>

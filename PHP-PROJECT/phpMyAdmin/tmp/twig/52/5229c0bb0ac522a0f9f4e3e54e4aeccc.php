@@ -79,6 +79,6 @@ class __TwigTemplate_06ff7550c2021b2f2cfec6b38fedca14 extends Template
 
     public function getSourceContext()
     {
-        return new Source("", "navigation/tree/quick_warp.twig", "/home/u128863200/domains/virammarines.com/public_html/creator/phpMyAdmin/templates/navigation/tree/quick_warp.twig");
+        return new Source("", "navigation/tree/quick_warp.twig", "/home/u128863200/domains/talentgate.in/public_html/live/creators/phpMyAdmin/templates/navigation/tree/quick_warp.twig");
     }
 }

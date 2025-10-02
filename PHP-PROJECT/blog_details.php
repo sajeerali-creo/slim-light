@@ -24,7 +24,7 @@ else{
         <div class="container">
             <div class="d-flex flex-column flex-lg-row justify-content-between">
                 <div class="d-flex flex-column align-items-start">
-                    <h4 class="h2"><?php echo isset($title) ? $title : '' ?></h4>
+                    <h4 class="h2 text-white"><?php echo isset($title) ? $title : '' ?></h4>
                 </div>
                 <!-- <div>
                     <div class="bredcums">
@@ -55,7 +55,6 @@ else{
                         id="dynamic-link">
 
                             <span>BACK TO BLOG</span>
-                            <i class="ti ti-arrow-up-right"></i>
                         </a>
                     </div>
                 </div>

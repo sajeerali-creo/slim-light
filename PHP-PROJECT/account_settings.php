@@ -375,14 +375,12 @@ if(isset($_POST["submit"]) && $_POST["submit"] == "profileform"){
         <div class="container">
             <div class="d-flex flex-column flex-lg-row justify-content-between">
                 <div class="d-flex flex-column align-items-start">
-                    <h4 class="h2">Profile Settings</h4>
-                    <p>Update your personal details, photo, and preferences here.</p>
+                    <h4 class="h2 text-white">Profile <span class="font-weight-200">Settings</span></h4>
+                    <p class="text-white opacity-50">Update your personal details, photo, and preferences here.</p>
                 </div>
-                <!-- <div>
-                    <div class="bredcums">
-                        <a href="<?= ROOT_URL ?>profile.php">Profile</a>/ Settings
-                    </div>
-                </div> -->
+                <div>
+                <a class="btn-outline btn-back" href="<?= ROOT_URL ?>profile.php">Back</a>
+            </div>
             </div>
         </div>
     </section>
@@ -432,7 +430,7 @@ if(isset($_POST["submit"]) && $_POST["submit"] == "profileform"){
                                 <?php endif; ?>
                         </div>
                         <div class="d-flex mt-4">
-                            <button type="submit" name="emailsubmit" class="btn-first w-auto px-4" value="emailform"><span>
+                            <button type="submit" name="emailsubmit" class="btn btn-primary w-auto px-4" value="emailform"><span>
                             <svg id="emailloader" class="button-spinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5" /></svg>
                             Save Update</span>
                             </button>
@@ -495,7 +493,7 @@ if(isset($_POST["submit"]) && $_POST["submit"] == "profileform"){
                     </div>
                     <div class="col-lg-12">
                         <div class="d-flex mt-4">
-                            <button type="submit" name="passwordsubmit" class="btn-first w-auto px-4" value="passwordform"><span>
+                            <button type="submit" name="passwordsubmit" class="btn btn-primary w-auto px-4" value="passwordform"><span>
                                 <svg id="passwordloader" class="button-spinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5" /></svg>
                                 Save Update</span></button>
                         </div>
@@ -547,7 +545,7 @@ if(isset($_POST["submit"]) && $_POST["submit"] == "profileform"){
                 </div>
                 <div class="col-lg-12">
                     <div class="d-flex mt-4">
-                        <button type="submit" name="personalsubmit" class="btn-first w-auto px-4" value="personalform"><span>
+                        <button type="submit" name="personalsubmit" class="btn btn-primary w-auto px-4" value="personalform"><span>
                             <svg id="personalloader" class="button-spinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5" /></svg>
                             Save Update</span></button>
                         <!-- <a href="#" class="btn-first w-auto px-4">Save Update</a> -->
@@ -996,7 +994,6 @@ if(isset($_POST["submit"]) && $_POST["submit"] == "profileform"){
                                 <button type="submit" name="submit" class="btn-fancy" value="profileform"><span>
                                 <svg id="loader" class="button-spinner" viewBox="0 0 50 50"><circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5" /></svg>
                                 Save Update</span>
-                                <i class="ti ti-arrow-up-right"></i></button>
                             </div>
                         </div>
                         </div>

@@ -105,6 +105,6 @@ class __TwigTemplate_72f5aab1a5983df2838715a05b55e6b1 extends Template
 
     public function getSourceContext()
     {
-        return new Source("", "console/query_action.twig", "/home/u128863200/domains/virammarines.com/public_html/creator/phpMyAdmin/templates/console/query_action.twig");
+        return new Source("", "console/query_action.twig", "/home/u128863200/domains/talentgate.in/public_html/live/creators/phpMyAdmin/templates/console/query_action.twig");
     }
 }

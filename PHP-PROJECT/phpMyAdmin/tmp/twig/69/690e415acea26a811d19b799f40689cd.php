@@ -88,6 +88,6 @@ yield _gettext("Close");
 
     public function getSourceContext()
     {
-        return new Source("", "modals/preview_sql_modal.twig", "/home/u128863200/domains/virammarines.com/public_html/creator/phpMyAdmin/templates/modals/preview_sql_modal.twig");
+        return new Source("", "modals/preview_sql_modal.twig", "/home/u128863200/domains/talentgate.in/public_html/live/creators/phpMyAdmin/templates/modals/preview_sql_modal.twig");
     }
 }

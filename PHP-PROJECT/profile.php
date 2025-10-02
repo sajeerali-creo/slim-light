@@ -104,11 +104,11 @@ $errors = [];
     </section>
 
     <!-- ===========SUBHEADER=========== -->
-    <section class="py-5 bg-inner-sub-head">
+    <section class="py-5 bg-body-tertiary">
         <div class="container">
             <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center">
                 <div class="d-flex flex-column align-items-start">
-                    <div class="d-flex gap-4 align-items-center ">
+                    <div class="d-lg-flex gap-4 align-items-center text-center text-lg-start">
                         <div class="user-profile mb-4 mb-lg-0">
                             <?php
                             $base64img = $profilePicture != null ? $profilePicture : ROOT_URL.'img/defaultimagex2.webp';
@@ -120,7 +120,7 @@ $errors = [];
                             ?>
                             <!-- <img src="data:image/jpeg;base64,<?= $base64img ?>" alt=""> -->
                         </div>
-                        <div class="user-details-area d-flex flex-column gap-2">
+                        <div class="user-details-area d-flex flex-column gap-2 mb-4 mb-lg-">
                             <h5 class="text-brand"><?php echo $clientprofileData[0]['FirstName'].' '.$clientprofileData[0]['MiddleName'].' '.$clientprofileData[0]['LastName']; ?></h5>
                             <span><?php echo $clientAreaData; ?></span>
                             <span><?php echo $clientprofileData[0]['EmailId']; ?></span>
@@ -130,10 +130,10 @@ $errors = [];
                 </div>
                 <div class="d-flex gap-2">
 <div>
-                    <a href="<?= ROOT_URL ?>account_settings.php" class="btn-first w-auto px-4 gap-2"><i class="ti ti-settings"></i>Account
+                    <a href="<?= ROOT_URL ?>account_settings.php" class="btn-outline w-auto px-4 gap-2"><i class="ti ti-settings"></i>Account
                         Settings</a>
                 </div>
-                <a href="<?= ROOT_URL ?>logout.php" class="btn-first w-auto px-4">Logout</a>
+                <a href="<?= ROOT_URL ?>logout.php" class="btn-outline w-auto px-4">Logout</a>
                 </div>
                 
 
@@ -381,10 +381,10 @@ $errors = [];
                             <div class="tab-pane fade" id="my-health-profile-tab-pane" role="tabpanel"
                                 aria-labelledby="contact-tab" tabindex="0">
                                 <div class="py-4">
-                                    <h4 class="text-uppercase mb-4 d-flex text-brand fs-5">Current Status</h4>
+                                    <h4 class="text-uppercase mb-3 d-flex text-brand fs-5">Current Status</h4>
                                     <p>To assess your weight,body composition and ideal health and fiitness targer,
                                         refer to your dietitian.</p>
-                                    <div class="d-flex flex-column flex-lg-row gap-3">
+                                    <div class="d-flex flex-column flex-lg-row gap-3 mt-5">
                                         <!-- <div class="w-100 box-stats p-5 current-bg flex-column">
                                             <img src="img/current-weight.svg" alt="">
                                             <strong class="pt-4 fs-4"><span id="personwieghtlabel"><?= !empty($healthProfileData) ? round($healthProfileData['PersonWeight'], 1) : '' ?></span> kg</strong>
@@ -489,7 +489,6 @@ $errors = [];
                                                                     stroke-width="5" />
                                                                     </svg>     
                                                                     Update</span>
-                                                                    <i class="ti ti-arrow-up-right"></i>
                                                                 </a>
                                                             </div>
                                                         </div>
@@ -533,7 +532,6 @@ $errors = [];
                                                                         stroke-width="5" />
                                                                         </svg> 
                                                                         Update</span>
-                                                                    <i class="ti ti-arrow-up-right"></i>
                                                                 </a>
                                                             </div>
                                                         </div>
@@ -574,7 +572,7 @@ $errors = [];
                                         <a href="#" class="btn-fancy" data-bs-toggle="modal"
                                             data-bs-target="#exampleModal" data-bs-whatever="@mdo">
                                             <span>Book an Appointment</span>
-                                            <i class="ti ti-arrow-up-right"></i>
+                                          
                                         </a>
                                     </div>
                                 </div>
@@ -618,7 +616,7 @@ $errors = [];
                                         <a href="#" class="btn-fancy" data-bs-toggle="modal"
                                             data-bs-target="#exampleModal" data-bs-whatever="@mdo">
                                             <span>Book an Appointment</span>
-                                            <i class="ti ti-arrow-up-right"></i>
+                                        
                                         </a>
                                     </div>
                                 </div>
@@ -666,7 +664,7 @@ $errors = [];
                                         <a href="#" class="btn-fancy" data-bs-toggle="modal"
                                             data-bs-target="#exampleModal" data-bs-whatever="@mdo">
                                             <span>Book an Appointment</span>
-                                            <i class="ti ti-arrow-up-right"></i>
+                                  
                                         </a>
                                     </div>
                                 </div>

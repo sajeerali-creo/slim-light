@@ -226,6 +226,6 @@ yield _pgettext("Last page", "End");
 
     public function getSourceContext()
     {
-        return new Source("", "list_navigator.twig", "/home/u128863200/domains/virammarines.com/public_html/creator/phpMyAdmin/templates/list_navigator.twig");
+        return new Source("", "list_navigator.twig", "/home/u128863200/domains/talentgate.in/public_html/live/creators/phpMyAdmin/templates/list_navigator.twig");
     }
 }

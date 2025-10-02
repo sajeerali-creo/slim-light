@@ -17,13 +17,11 @@ if($query && mysqli_num_rows($query) > 0) {
         <div class="container">
             <div class="d-flex flex-column flex-lg-row justify-content-between">
                 <div class="d-flex flex-column align-items-start">
-                    <h4 class="h2">Privacy Policy</h4>
+                    <h4 class="h2 text-white">Privacy <span class="font-weight-200">Policy</span></h4>
                 </div>
-                <!-- <div>
-                    <div class="bredcums">
-                        <a href="/">Home</a>/ Privacy Policy
-                    </div>
-                </div> -->
+               <div>
+                <a class="btn-outline btn-back" href="<?= ROOT_URL ?>">Back</a>
+            </div>
             </div>
         </div>
     </section>

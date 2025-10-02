@@ -261,6 +261,6 @@ yield _gettext("Switch to dark theme");
 
     public function getSourceContext()
     {
-        return new Source("", "console/display.twig", "/home/u128863200/domains/virammarines.com/public_html/creator/phpMyAdmin/templates/console/display.twig");
+        return new Source("", "console/display.twig", "/home/u128863200/domains/talentgate.in/public_html/live/creators/phpMyAdmin/templates/console/display.twig");
     }
 }

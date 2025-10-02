@@ -27,7 +27,7 @@
     <!-- JQVMap -->
     <link rel="stylesheet" href="<?php echo base_url ?>plugins/jqvmap/jqvmap.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="<?php echo base_url ?>dist/css/adminlte.css">
+    <link rel="stylesheet" href="<?php echo base_url ?>dist/css/adminlte2.css">
     <link rel="stylesheet" href="<?php echo base_url ?>dist/css/custom_7.css">
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="<?php echo base_url ?>plugins/overlayScrollbars/css/OverlayScrollbars.min.css">

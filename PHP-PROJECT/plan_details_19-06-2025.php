@@ -1,70 +1,68 @@
-<?php 
+<?php
 include 'partials/header.php';
 
-if(isset($_GET['id'])){
-	$qry = $connection->query("SELECT * from `meal_plans` where id = '{$_GET['id']}' ");
-	foreach($qry->fetch_array() as $k => $v){
-		if(!is_numeric($k)){
-			$$k = $v;
-		}
-	}
+if (isset($_GET['id'])) {
+    $qry = $connection->query("SELECT * from `meal_plans` where id = '{$_GET['id']}' ");
+    foreach ($qry->fetch_array() as $k => $v) {
+        if (!is_numeric($k)) {
+            $$k = $v;
+        }
+    }
 }
-$packageGroup= [];
+$packageGroup = [];
 $response = GetPackageGroupList();
 if (
     isset($response['ValidationDetails']['StatusCode']) &&
     $response['ValidationDetails']['StatusCode'] == 200 &&
     !empty($response['MasterDataList'][0])
 ) {
-    $packageGroup = $response['MasterDataList'];   
+    $packageGroup = $response['MasterDataList'];
 }
-$packages= [];
+$packages = [];
 $response = GetPackageList();
 if (
     isset($response['ValidationDetails']['StatusCode']) &&
     $response['ValidationDetails']['StatusCode'] == 200 &&
     !empty($response['MasterDataList'][0])
 ) {
-    $packages = $response['MasterDataList'];   
-} 
+    $packages = $response['MasterDataList'];
+}
 $location_response = fetchLocations();
-if($location_response['ValidationDetails']['StatusCode'] == 200){
+if ($location_response['ValidationDetails']['StatusCode'] == 200) {
     $locations = $location_response['MasterDataList'];
 }
 ?>
 <!-- ===========BANNER=========== -->
-    <section class="inner-banner">
-    </section>
+<section class="inner-banner">
+</section>
 
-    <!-- ===========SUBHEADER=========== -->
-    <section class="py-5 bg-inner-sub-head">
-        <div class="container">
-            <div class="d-flex flex-column flex-lg-row justify-content-between">
-                <div class="d-flex flex-column align-items-start">
-                    <h4 class="h2">Plan Details</h4>
-                    <p>Plan Details: Full health, dental, vision, wellness, flexible premiums, 24/7 support.</p>
-                </div>
-                <div>
-                    <div class="bredcums">
-                        <a href="<?= ROOT_URL ?>">Home</a>/ <a href="<?= ROOT_URL ?>meal_plans.php">Meal Plans</a> / Shape Up
-                    </div>
-                </div>
+<!-- ===========SUBHEADER=========== -->
+<section class="py-5 bg-inner-sub-head">
+    <div class="container">
+        <div class="d-flex flex-column flex-lg-row justify-content-between">
+            <div class="d-flex flex-column align-items-start">
+                <h4 class="h2">Plan Details</h4>
+                <p>Plan Details: Full health, dental, vision, wellness, flexible premiums, 24/7 support.</p>
+            </div>
+            <div>
+                <a class="btn-outline btn-back" href="<?= ROOT_URL ?>">Back</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 
-    <!-- ===========SIGNATURE DISH=========== -->
-    <section class="padding-bottom padding-top">
-        <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-lg-6 product-slider">
-                    <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="<?php echo ADMIN_URL.$file_path; ?>" class="d-block w-100" alt="Slide 1">
-                            </div>
-                            <!-- <div class="carousel-item">
+<!-- ===========SIGNATURE DISH=========== -->
+<section class="padding-bottom padding-top">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-lg-6 product-slider">
+                <div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="<?php echo ADMIN_URL . $file_path; ?>" class="d-block w-100" alt="Slide 1">
+                        </div>
+                        <!-- <div class="carousel-item">
                                 <img src="img/detail-2.webp" class="d-block w-100" alt="Slide 2">
                             </div>
                             <div class="carousel-item">
@@ -76,8 +74,8 @@ if($location_response['ValidationDetails']['StatusCode'] == 200){
                             <div class="carousel-item">
                                 <img src="img/detail-5.webp" class="d-block w-100" alt="Slide 3">
                             </div> -->
-                        </div>
-                        <!-- <div class="d-flex justify-content-between align-items-center mt-3">
+                    </div>
+                    <!-- <div class="d-flex justify-content-between align-items-center mt-3">
                             <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel"
                                 data-bs-slide="prev">
                                 <i class="ti ti-arrow-narrow-left"></i>
@@ -99,51 +97,52 @@ if($location_response['ValidationDetails']['StatusCode'] == 200){
                                 <i class="ti ti-arrow-narrow-right"></i>
                             </button>
                         </div> -->
-                    </div>
                 </div>
-                <div class="col-lg-5">
-                    <h4>About the Plan</h4>
-                    <h2 class="h2"><?php echo isset($title) ? $title : '' ?></h2>
-                    <p><?php echo (isset($description)) ? html_entity_decode(($description)) : '' ?></p>
-                    <div class="d-flex mt-5 light-bg">
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                            data-bs-whatever="@mdo" class="btn-fancy">
-                            <span>Get Started Today</span>
-                            <i class="ti ti-arrow-up-right"></i>
-                        </button>
-                    </div>
+            </div>
+            <div class="col-lg-5">
+                <h4>About the Plan</h4>
+                <h2 class="h2"><?php echo isset($title) ? $title : '' ?></h2>
+                <p><?php echo (isset($description)) ? html_entity_decode(($description)) : '' ?></p>
+                <div class="d-flex mt-5 light-bg">
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"
+                        class="btn-fancy">
+                        <span>Get Started Today</span>
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="container py-5">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <h2 class="h2 text-brand d-flex mb-4">BEGIN YOUR HEALTHY JOURNEY</h2>
-                                <h4>Package Type</h4>
-                                <p>All our meal packages can be customized to meet your budget.</p>
-                                <div>
-                                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                        <?php 
-										  //echo "<pre>";
-										  //print_r($packageGroup);
-										?>
-										<?php if($packageGroup){
-                                                foreach ($packageGroup as $index => $item): ?>
-                                                    <li class="nav-item" role="presentation">
-                                                        <button class="nav-link <?= $index == 0 ? 'active' : ''; ?>" id="package-tab-<?= $item['GroupCode'] ?>" data-bs-toggle="tab"
-                                                            data-bs-target="#package-tab-<?= $item['GroupCode'] ?>-pane" type="button" role="tab"
-                                                            aria-controls="package-tab-<?= $item['GroupCode'] ?>-pane" aria-selected="true"><?php echo $item['GroupName']; ?></button>
-                                                    </li>
-                                            <?php endforeach; 
-                                        } ?>
-                                        <!-- <li class="nav-item" role="presentation">
+<!-- modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container py-5">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <h2 class="h2 text-brand d-flex mb-4">BEGIN YOUR HEALTHY JOURNEY</h2>
+                            <h4>Package Type</h4>
+                            <p>All our meal packages can be customized to meet your budget.</p>
+                            <div>
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <?php
+                                    //echo "<pre>";
+                                    //print_r($packageGroup);
+                                    ?>
+                                    <?php if ($packageGroup) {
+                                        foreach ($packageGroup as $index => $item): ?>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link <?= $index == 0 ? 'active' : ''; ?>"
+                                                    id="package-tab-<?= $item['GroupCode'] ?>" data-bs-toggle="tab"
+                                                    data-bs-target="#package-tab-<?= $item['GroupCode'] ?>-pane" type="button"
+                                                    role="tab" aria-controls="package-tab-<?= $item['GroupCode'] ?>-pane"
+                                                    aria-selected="true"><?php echo $item['GroupName']; ?></button>
+                                            </li>
+                                        <?php endforeach;
+                                    } ?>
+                                    <!-- <li class="nav-item" role="presentation">
                                             <button class="nav-link" id="b-slim-tab" data-bs-toggle="tab"
                                                 data-bs-target="#b-slim-tab-pane" type="button" role="tab"
                                                 aria-controls="b-slim-tab-pane" aria-selected="false">B-Slim</button>
@@ -170,26 +169,29 @@ if($location_response['ValidationDetails']['StatusCode'] == 200){
                                                 aria-controls="sunrise-tab-pane" aria-selected="false">Sunrise</button>
                                         </li> -->
 
-                                    </ul>
-                                    <div class="tab-content mt-4 product-book" id="myTabContent">
-                                        <?php if($packages){
-                                            foreach ($packages as $index => $item): ?>
-                                                <div class="tab-pane fade <?= $index == 0 ? 'active show' : ''; ?>" id="package-tab-<?= $item['GroupCode'] ?>-pane" role="tabpanel"
-                                                    aria-labelledby="home-tab" tabindex="0">
-                                                    <h4 class="text-brand d-flex mb-4">Plan Duration</h4>
-                                                    <div class="mt-4">
-                                                        <div class="radio-group">
-															<?php 
-																//echo "<pre>";
-																//print_r($packages);
-															?>
-                                                            <?php foreach ($packages as $index => $subitem){
-                                                                if($subitem['GroupCode'] == $item['GroupCode']){ ?>
-                                                                    <input type="radio" id="r1" name="duration" class="radio-input">
-                                                                    <label for="r1" class="radio-label"><?php echo $subitem['DurationDays']; ?> days</label>
-                                                                <?php } 
-															} ?>
-                                                            <!-- <input type="radio" id="r2" name="duration" class="radio-input">
+                                </ul>
+                                <div class="tab-content mt-4 product-book" id="myTabContent">
+                                    <?php if ($packages) {
+                                        foreach ($packages as $index => $item): ?>
+                                            <div class="tab-pane fade <?= $index == 0 ? 'active show' : ''; ?>"
+                                                id="package-tab-<?= $item['GroupCode'] ?>-pane" role="tabpanel"
+                                                aria-labelledby="home-tab" tabindex="0">
+                                                <h4 class="text-brand d-flex mb-4">Plan Duration</h4>
+                                                <div class="mt-4">
+                                                    <div class="radio-group">
+                                                        <?php
+                                                        //echo "<pre>";
+                                                        //print_r($packages);
+                                                        ?>
+                                                        <?php foreach ($packages as $index => $subitem) {
+                                                            if ($subitem['GroupCode'] == $item['GroupCode']) { ?>
+                                                                <input type="radio" id="r1" name="duration" class="radio-input">
+                                                                <label for="r1"
+                                                                    class="radio-label"><?php echo $subitem['DurationDays']; ?>
+                                                                    days</label>
+                                                            <?php }
+                                                        } ?>
+                                                        <!-- <input type="radio" id="r2" name="duration" class="radio-input">
                                                             <label for="r2" class="radio-label">20 days</label>
 
                                                             <input type="radio" id="r3" name="duration" class="radio-input">
@@ -197,115 +199,113 @@ if($location_response['ValidationDetails']['StatusCode'] == 200){
 
                                                             <input type="radio" id="r4" name="duration" class="radio-input">
                                                             <label for="r4" class="radio-label">28 days</label> -->
-                                                        </div>
-                                                    </div>
-                                                    <div class="mt-4 d-flex mb-3">
-                                                        <h4 class="text-brand">Book Your Consultation</h4>
-                                                    </div>
-                                                    <div class="d-flex gap-3 mb-4">
-                                                        <label class="custom-checkbox">
-                                                            <input type="checkbox" />
-                                                            <span class="checkmark"></span>
-                                                            In Person
-                                                        </label>
-                                                        <label class="custom-checkbox">
-                                                            <input type="checkbox" />
-                                                            <span class="checkmark"></span>
-                                                            Virtual/Tele-consultation
-                                                        </label>
                                                     </div>
                                                 </div>
-                                            <?php endforeach; 
-                                        } ?>
-                                    </div>
+                                                <div class="mt-4 d-flex mb-3">
+                                                    <h4 class="text-brand">Book Your Consultation</h4>
+                                                </div>
+                                                <div class="d-flex gap-3 mb-4">
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                        In Person
+                                                    </label>
+                                                    <label class="custom-checkbox">
+                                                        <input type="checkbox" />
+                                                        <span class="checkmark"></span>
+                                                        Virtual/Tele-consultation
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        <?php endforeach;
+                                    } ?>
                                 </div>
                             </div>
-                            <div class="col-lg-4">
-                                <div class="plan-detail-card p-5">
-                                    <h4 class="d-flex text-white mb-4">Gourmet Package</h4>
-                                    <div class="d-flex flex-column gap-3">
-                                        <div class="d-flex gap-2 align-items-center">
-                                            <i class="ti ti-circle-check-filled text-success"></i>
-                                            <div class="text-white">Breakfast</div>
-                                        </div>
-                                        <div class="d-flex gap-2 align-items-center">
-                                            <i class="ti ti-circle-check-filled text-success"></i>
-                                            <div class="text-white">Lunch + Lunch Salad</div>
-                                        </div>
-                                        <div class="d-flex gap-2 align-items-center">
-                                            <i class="ti ti-circle-check-filled text-success"></i>
-                                            <div class="text-white">Dinner + Dinner Soup/Salad</div>
-                                        </div>
-                                        <div class="d-flex gap-2 align-items-center">
-                                            <i class="ti ti-circle-check-filled text-success"></i>
-                                            <div class="text-white">Fruit</div>
-                                        </div>
-                                        <div class="d-flex gap-2 align-items-center">
-                                            <i class="ti ti-circle-check-filled text-success"></i>
-                                            <div class="text-white">Snack</div>
-                                        </div>
-                                        <div class="d-flex gap-2 align-items-center">
-                                            <i class="ti ti-circle-check-filled text-success"></i>
-                                            <div class="text-white">Dairy Drink</div>
-                                        </div>
-                                        <div class="d-flex gap-2 align-items-center">
-                                            <i class="ti ti-circle-check-filled text-success"></i>
-                                            <div class="text-white">1 Free Dietary Consultation</div>
-                                        </div>
-                                        <div class="d-flex gap-2 align-items-center">
-                                            <i class="ti ti-circle-check-filled text-success"></i>
-                                            <div class="text-white">3 Free Follow Ups</div>
-                                        </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="plan-detail-card p-5">
+                                <h4 class="d-flex text-white mb-4">Gourmet Package</h4>
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <i class="ti ti-circle-check-filled text-success"></i>
+                                        <div class="text-white">Breakfast</div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 mt-4">
-                                <div class="row form">
-                                    <div class="col-lg-3 col-md-6">
-                                        <label for="">First Name</label>
-                                        <input type="email" class="form-control w-100" id="exampleFormControlInput1"
-                                            placeholder="Enter">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <i class="ti ti-circle-check-filled text-success"></i>
+                                        <div class="text-white">Lunch + Lunch Salad</div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <label for="">Email ID</label>
-                                        <input type="email" class="form-control w-100" id="exampleFormControlInput1"
-                                            placeholder="name@example.com">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <i class="ti ti-circle-check-filled text-success"></i>
+                                        <div class="text-white">Dinner + Dinner Soup/Salad</div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <label for="">Phone Number</label>
-                                        <input type="email" class="form-control w-100" id="exampleFormControlInput1"
-                                            placeholder="+971">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <i class="ti ti-circle-check-filled text-success"></i>
+                                        <div class="text-white">Fruit</div>
                                     </div>
-                                    <div class="col-lg-3 col-md-6">
-                                        <label for="">Location</label>
-                                        <select name="" class="form-select" id="">
-                                            <option value="">Select Location</option>
-                                            <?php foreach ($locations as $loc): ?>
-                                                <?php if ($loc['IsActive']): ?>
-                                                    <option value="<?= $loc['LocationCode'] ?>">
-                                                        <?= $loc['LocationName'] ?>
-                                                    </option>
-                                                <?php endif; ?>
-                                            <?php endforeach; ?>
-                                        </select>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <i class="ti ti-circle-check-filled text-success"></i>
+                                        <div class="text-white">Snack</div>
                                     </div>
-                                    <div class="col-lg-12">
-                                        <label for="">Location</label>
-                                        <textarea name="" class="form-control" id=""></textarea>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <i class="ti ti-circle-check-filled text-success"></i>
+                                        <div class="text-white">Dairy Drink</div>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <i class="ti ti-circle-check-filled text-success"></i>
+                                        <div class="text-white">1 Free Dietary Consultation</div>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <i class="ti ti-circle-check-filled text-success"></i>
+                                        <div class="text-white">3 Free Follow Ups</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt-4">
-                            <div class="col-lg-12">
-                                <div class="d-flex justify-content-end gap-3 align-items-center">
-                                    <a data-bs-dismiss="modal" class="btn-link">Cancel</a>
-                                    <div class="d-flex light-bg">
-                                        <a href="#" class="btn-fancy">
-                                            <span>Submit & Next</span>
-                                            <i class="ti ti-arrow-up-right"></i>
-                                        </a>
-                                    </div>
+                        <div class="col-lg-12 mt-4">
+                            <div class="row form">
+                                <div class="col-lg-3 col-md-6">
+                                    <label for="">First Name</label>
+                                    <input type="email" class="form-control w-100" id="exampleFormControlInput1"
+                                        placeholder="Enter">
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label for="">Email ID</label>
+                                    <input type="email" class="form-control w-100" id="exampleFormControlInput1"
+                                        placeholder="name@example.com">
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label for="">Phone Number</label>
+                                    <input type="email" class="form-control w-100" id="exampleFormControlInput1"
+                                        placeholder="+971">
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <label for="">Location</label>
+                                    <select name="" class="form-select" id="">
+                                        <option value="">Select Location</option>
+                                        <?php foreach ($locations as $loc): ?>
+                                            <?php if ($loc['IsActive']): ?>
+                                                <option value="<?= $loc['LocationCode'] ?>">
+                                                    <?= $loc['LocationName'] ?>
+                                                </option>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
+                                <div class="col-lg-12">
+                                    <label for="">Location</label>
+                                    <textarea name="" class="form-control" id=""></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-lg-12">
+                            <div class="d-flex justify-content-end gap-3 align-items-center">
+                                <a data-bs-dismiss="modal" class="btn-link">Cancel</a>
+                                <div class="d-flex light-bg">
+                                    <a href="#" class="btn-fancy">
+                                        <span>Submit & Next</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -314,41 +314,42 @@ if($location_response['ValidationDetails']['StatusCode'] == 200){
             </div>
         </div>
     </div>
+</div>
 
-    <section class="bg-gray padding-bottom padding-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 mb-4">
-                    <h4 class="text-brand">What’s in your bag? Take a look</h4>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-                    <div class="team-box">
-                        <div class="team-details">
-                            <h5>Chicken Fajita & Cauliflower Rice</h5>
-                        </div>
-                        <img src="img/extra-1.webp" alt="">
+<section class="bg-gray padding-bottom padding-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mb-4">
+                <h4 class="text-brand">What’s in your bag? Take a look</h4>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                <div class="team-box">
+                    <div class="team-details">
+                        <h5>Chicken Fajita & Cauliflower Rice</h5>
                     </div>
+                    <img src="img/extra-1.webp" alt="">
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-                    <div class="team-box">
-                        <div class="team-details">
-                            <h5>Grilled Chicken & Pearl Couscous
-                                with Tomato Olive Sauce</h5>
-                        </div>
-                        <img src="img/extra-2.webp" alt="">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                <div class="team-box">
+                    <div class="team-details">
+                        <h5>Grilled Chicken & Pearl Couscous
+                            with Tomato Olive Sauce</h5>
                     </div>
+                    <img src="img/extra-2.webp" alt="">
                 </div>
-                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
-                    <div class="team-box">
-                        <div class="team-details">
-                            <h5>Seafood Fettuccine</h5>
-                        </div>
-                        <img src="img/extra-3.webp" alt="">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                <div class="team-box">
+                    <div class="team-details">
+                        <h5>Seafood Fettuccine</h5>
                     </div>
+                    <img src="img/extra-3.webp" alt="">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 <?php
 include './partials/footer.php';
 ?>
