@@ -27,7 +27,7 @@ else{
                     <h4 class="h2 text-white"><?php echo isset($title) ? $title : '' ?></h4>
                 </div>
                      <div>
-                <a class="btn-outline btn-back" href="<?= ROOT_URL ?>">Back</a>
+                <button class="btn-outline btn-back" id="backBtn">Back</button>
             </div>
             </div>
         </div>

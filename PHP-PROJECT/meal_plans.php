@@ -14,7 +14,7 @@ include 'partials/header.php'
                 <p class="text-white opacity-50">Leave Your Shopping, Cooking and Calorie Counting to us!</p>
             </div>
             <div>
-                <a class="btn-outline btn-back" href="<?= ROOT_URL ?>">Back</a>
+                <button class="btn-outline btn-back" id="backBtn">Back</button>
             </div>
         </div>
     </div>
@@ -59,6 +59,21 @@ $query = mysqli_query($connection, "select * from meal_plans");
         </div>
     </div>
 </section>
+
+<div id="myModal" class="modal-auto">
+    <div class="modal-auto-content">
+        <span class="close-auto">&times;</span>
+        <div class="w-100 hero-meal d-flex justify-content-center align-items-center flex-column">
+            <h2 class="h2 text-center">Need help finding the <br class="d-none d-lg-block"><span
+                    class="font-weight-200">right meal plan?</span></h2>
+            <p class="text-white text-center">Tell us a little about your goals and we’ll create the <br
+                    class="d-none d-lg-block">perfect plan tailored just for you.</p>
+            <a href="<?= ROOT_URL ?>contact.php" class="bg-lime-button btn btn-primary px-5">Let’s go!</a>
+        </div>
+    </div>
+</div>
+
+
 <?php
 include './partials/footer.php';
 ?>

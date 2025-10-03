@@ -282,7 +282,36 @@ while ($row = $query->fetch_assoc()) {
   });
 </script>
 
+  <script>
+    // Get modal and close button
+    const modal = document.getElementById("myModal");
+    const closeBtn = document.querySelector(".close-auto");
 
+    // Show modal after 3 seconds
+    window.onload = function() {
+      setTimeout(() => {
+        modal.style.display = "flex";
+      }, 3000); // 3 seconds
+    };
+
+    // Close modal on click of X
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    };
+
+    // Close modal if clicked outside
+    window.onclick = function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+
+  <script>
+  $("#backBtn").on("click", function() {
+    window.history.back();
+  });
+</script>
 
 
 

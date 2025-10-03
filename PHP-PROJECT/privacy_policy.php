@@ -20,7 +20,7 @@ if($query && mysqli_num_rows($query) > 0) {
                     <h4 class="h2 text-white">Privacy <span class="font-weight-200">Policy</span></h4>
                 </div>
                <div>
-                <a class="btn-outline btn-back" href="<?= ROOT_URL ?>">Back</a>
+                <button class="btn-outline btn-back" id="backBtn">Back</button>
             </div>
             </div>
         </div>

@@ -66,7 +66,7 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "contactform") {
                         us!</span></h4>
             </div>
             <div>
-                <a class="btn-outline btn-back" href="<?= ROOT_URL ?>">Back</a>
+                <button class="btn-outline btn-back" id="backBtn">Back</button>
             </div>
         </div>
     </div>

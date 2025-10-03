@@ -147,6 +147,44 @@ if ($query) {
 <?php echo $section_3; ?>
 <?php
 //include "admin/about.html"; ?>
+
+<!-- ===========Testimonials=========== -->
+<?php
+$query = mysqli_query($connection, "SELECT * FROM testimonials ORDER BY id DESC LIMIT 3");
+?>
+<section class="padding-bottom padding-top border-top" id="testimonial">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="h2">Our <span class="font-weight-200">Testimonials</span></h2>
+        </div>
+        <div class="row">
+            <?php while ($result = mysqli_fetch_array($query)) { ?>
+                <div class="col-lg-4 mb-4">
+                    <div class="testibox p-4 p-lg-5">
+                        <div class="stars mb-4">
+                            <?php
+                            for ($i = 0; $i < $result['rating']; $i++) {
+                                echo '<i class="ti ti-star-filled"></i>';
+                            } ?>
+                        </div>
+                        <p><?php
+                        echo safeLimitString($result['message'], 270); ?></p>
+                        <div class="d-flex gap-2 mt-4">
+                            <div class="head">
+                                <img src="<?php echo ADMIN_URL . $result['file_path']; ?>" alt="">
+                            </div>
+                            <div class="details">
+                                <h5><?php echo $result['message_from']; ?></h5>
+                                <small><?php echo $result['business_name']; ?></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</section>
+
 <?php
 include './partials/footer.php';
 ?>

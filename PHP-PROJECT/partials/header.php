@@ -52,7 +52,7 @@ if (isset($_SESSION['user'])) {
     <!-- main font -->
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
     <!-- main style -->
-    <link rel="stylesheet" href="css/core_68.css">
+    <link rel="stylesheet" href="css/core_75.css">
     <!-- animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- slider -->
@@ -312,10 +312,10 @@ if (isset($_SESSION['user'])) {
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="transp-box">
-                                                <a href="<?= ROOT_URL ?>about.php#our-menu"
+                                                <a href="<?= ROOT_URL ?>about.php#why-choose-blight"
                                                     class="d-flex gap-3 align-items-center">
                                                     <div>
-                                                        <img src="img/ic-a2.svg" alt="">
+                                                        <img src="img/ic-a3.svg" alt="">
                                                     </div>
                                                     <div class="text-brand">Certifications</div>
                                                 </a>
@@ -323,10 +323,10 @@ if (isset($_SESSION['user'])) {
                                         </div>
                                         <div class="col-lg-4">
                                             <div class="transp-box">
-                                                <a href="<?= ROOT_URL ?>about.php#our-menu"
+                                                <a href="<?= ROOT_URL ?>about.php#testimonial"
                                                     class="d-flex gap-3 align-items-center">
                                                     <div>
-                                                        <img src="img/ic-a2.svg" alt="">
+                                                        <img src="img/ic-a5.svg" alt="">
                                                     </div>
                                                     <div class="text-brand">Testimonials</div>
                                                 </a>
@@ -337,7 +337,7 @@ if (isset($_SESSION['user'])) {
                                                 <a href="<?= ROOT_URL ?>about.php#our-menu"
                                                     class="d-flex gap-3 align-items-center">
                                                     <div>
-                                                        <img src="img/ic-a2.svg" alt="">
+                                                        <img src="img/ic-a6.svg" alt="">
                                                     </div>
                                                     <div class="text-brand">Locations</div>
                                                 </a>
@@ -348,7 +348,7 @@ if (isset($_SESSION['user'])) {
                                                 <a href="<?= ROOT_URL ?>about.php#our-menu"
                                                     class="d-flex gap-3 align-items-center">
                                                     <div>
-                                                        <img src="img/ic-a2.svg" alt="">
+                                                        <img src="img/ic-a7.svg" alt="">
                                                     </div>
                                                     <div class="text-brand">Reviews</div>
                                                 </a>

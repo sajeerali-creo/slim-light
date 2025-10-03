@@ -13,7 +13,7 @@ include 'partials/header.php'
                     <h4 class="h2 text-white">Blogs</h4>
                 </div>
                 <div>
-                <a class="btn-outline btn-back" href="<?= ROOT_URL ?>">Back</a>
+                <button class="btn-outline btn-back" id="backBtn">Back</button>
             </div>
             </div>
         </div>

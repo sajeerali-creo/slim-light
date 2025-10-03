@@ -45,7 +45,7 @@ if ($location_response['ValidationDetails']['StatusCode'] == 200) {
                 <p>Plan Details: Full health, dental, vision, wellness, flexible premiums, 24/7 support.</p>
             </div>
             <div>
-                <a class="btn-outline btn-back" href="<?= ROOT_URL ?>">Back</a>
+                <button class="btn-outline btn-back" id="backBtn">Back</button>
             </div>
         </div>
     </div>

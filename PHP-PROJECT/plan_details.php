@@ -83,7 +83,7 @@ $gallery_dir = ADMIN_UPLOAD_URL . "meal_gallery/";
                     Journey!</p>
             </div>
             <div>
-                <a class="btn-outline btn-back" href="<?= ROOT_URL ?>">Back</a>
+                <button class="btn-outline btn-back" id="backBtn">Back</button>
             </div>
         </div>
     </div>
@@ -149,7 +149,8 @@ $gallery_dir = ADMIN_UPLOAD_URL . "meal_gallery/";
                     Starting 99 AED/ full day
                 </span>
                 <div class="d-flex flex-column flex-xl-row mt-5 light-bg gap-2">
-                    <button type="button" class="btn btn-primary w-100 d-flex justify-content-center" id="get-started-btn">
+                    <button type="button" class="btn btn-primary w-100 d-flex justify-content-center"
+                        id="get-started-btn">
                         <span>Get Started Today</span>
                     </button>
                     <a href="img/menu.pdf" class="btn-outline w-100 px-4 d-flex gap-1" id="get-started-btn">
@@ -272,8 +273,14 @@ $query = mysqli_query($connection, "SELECT * FROM meal_plans WHERE id != $curren
                     <div class="container py-5">
                         <div class="row">
                             <div class="col-lg-12 d-flex justify-content-between align-items">
-                                <h2 class="h2 text-brand d-flex mb-4"><?php echo $title; ?></h2>
-                                <a href="#" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-square-rounded-x-filled text-brand fs-2"></i></a>
+                                <div class="d-flex align-items-center gap-3 mb-4">
+                                    <div class="meal-thumb">
+                                        <i class="ti ti-salad"></i>
+                                    </div>
+                                    <h2 class="h2 text-brand d-flex"><?php echo $title; ?></h2>
+                                </div>
+                                <a href="#" data-bs-dismiss="modal" aria-label="Close"><i
+                                        class="ti ti-square-rounded-x-filled text-brand fs-2"></i></a>
                             </div>
                             <div class="col-lg-8">
                                 <div class="row">
@@ -414,7 +421,7 @@ $query = mysqli_query($connection, "SELECT * FROM meal_plans WHERE id != $curren
                                                 <button class="btn-fancy">Submit</button>
                                             </div>
                                             <hr> -->
-                                        <div class="d-flex justify-content-between opacity-50">
+                                        <div class="d-flex justify-content-between">
                                             <span>Package Price</span>
                                             <strong>AED <span
                                                     id="package-unit-rate"><?php echo $package_details['UnitRate']; ?><span></strong>
@@ -467,6 +474,7 @@ $query = mysqli_query($connection, "SELECT * FROM meal_plans WHERE id != $curren
                                                 <?php
                                             }
                                         } ?>
+                                        <hr>
                                         <div class="d-flex justify-content-between">
                                             <span class="fs-5">Subtotal (incl. VAT)</span>
                                             <strong class="d-flex justify-content-end fs-5">
@@ -511,6 +519,19 @@ $query = mysqli_query($connection, "SELECT * FROM meal_plans WHERE id != $curren
         </div>
     </div>
 </div>
+
+<div id="myModal" class="modal-auto">
+    <div class="modal-auto-content">
+        <span class="close-auto">&times;</span>
+        <div class="w-100 hero-meal2 d-flex justify-content-center align-items-center flex-column">
+            <h2 class="h2 text-center">Subscribe Today <span
+                    class="font-weight-200">& Enjoy a Complimentary Licensed Dietitian Consultation,Follow-Ups, 1 <span class="text-lime">Free</span> PT Session, and More!</span></h2>
+            <!-- <p class="text-white text-center"></p> -->
+            <!-- <a href="<?= ROOT_URL ?>contact.php" class="bg-lime-button btn btn-primary px-5">Let’s go!</a> -->
+        </div>
+    </div>
+</div>
+
 <?php
 $res = $connection->query("SELECT gallery_2_images FROM meal_plans WHERE id = {$id}");
 $data = $res->fetch_assoc();
@@ -618,3 +639,4 @@ include './partials/footer.php';
         // return true;
     });
 </script>
+

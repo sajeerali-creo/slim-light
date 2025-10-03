@@ -379,7 +379,7 @@ if(isset($_POST["submit"]) && $_POST["submit"] == "profileform"){
                     <p class="text-white opacity-50">Update your personal details, photo, and preferences here.</p>
                 </div>
                 <div>
-                <a class="btn-outline btn-back" href="<?= ROOT_URL ?>profile.php">Back</a>
+                <button class="btn-outline btn-back" id="backBtn">Back</button>
             </div>
             </div>
         </div>
