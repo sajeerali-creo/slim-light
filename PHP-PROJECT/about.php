@@ -38,7 +38,7 @@ if ($query) {
 <?php echo $section_1; ?>
 
 <!-- ===========SUBHEADER=========== -->
-<section class="padding-bottom bg-gray padding-top">
+<section class="padding-bottom bg-gray padding-top" id="team">
     <div class="container mb-5" bis_skin_checked="1">
         <div class="row" bis_skin_checked="1">
             <div class="col-lg-6" data-aos="fade-up" bis_skin_checked="1">
@@ -74,10 +74,12 @@ if ($query) {
                             <div class="main-box-team">
                                 <div class="team-box">
                                     <img src="<?= $gallery_dir . $img ?>" alt="Uploaded Image" style="width: 100%;">
+                                    
                                 </div>
                                 <div class="p-4">
                                     <h5><?= $name ?></h5>
                                     <div class="opacity-50"><?= $designation ?></div>
+                                    <i class="ti ti-eye"></i>
                                 </div>
                             </div>
                         </a>
@@ -107,10 +109,16 @@ if ($query) {
             <div class="dietitian-description">
                 description
             </div>
+
+            <div class="d-flex justify-content-center mt-5 w-100 d-flex justify-content-center">
+                <a href="<?= ROOT_URL ?>contact.php" class="btn btn-primary w-100 d-flex justify-content-center bg-lime-button">Book Dietitian Now</a>
+            </div>
         </div>
     </div>
 
 </section>
+
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         var offcanvasRight = document.getElementById('offcanvasRight');

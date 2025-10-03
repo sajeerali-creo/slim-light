@@ -52,7 +52,7 @@ if (isset($_SESSION['user'])) {
     <!-- main font -->
     <link href="https://fonts.cdnfonts.com/css/helvetica-neue-55" rel="stylesheet">
     <!-- main style -->
-    <link rel="stylesheet" href="css/core_60.css">
+    <link rel="stylesheet" href="css/core_68.css">
     <!-- animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- slider -->
@@ -77,125 +77,297 @@ if (isset($_SESSION['user'])) {
     </div>
 
     <header class="main-header d-flex align-items-center">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="<?= ROOT_URL ?>" class="d-flex align-items-center">
-                <img src="img/logo-animated2.gif" class="logo" alt="">
-            </a>
-            <div class="d-none d-lg-block">
-                <div class="d-flex gap-5 menus align-items-center">
-                    <a href="#" class="drawer-trigger position-relative" id="myBtn">Meal Plans</a>
-                    <div class="drawer mx-5">
-                        <div class="container">
+        <div class="px-5 d-flex justify-content-between align-items-center w-100">
+            <div class="d-flex gap-5">
+                <a href="<?= ROOT_URL ?>" class="d-flex align-items-center">
+                    <img src="img/logo-animated2.gif" class="logo" alt="">
+                </a>
+                <div class="d-none d-lg-flex">
+                    <div class="d-flex gap-5 menus align-items-center">
+                        <a href="<?= ROOT_URL ?>meal_plans.php"
+                            class="drawer-trigger position-relative d-flex align-items-center h-100" id="myBtn">Meal
+                            Plans&nbsp;<i class="ti ti-chevron-down fs-5"></i></a>
+                        <div class="drawer">
                             <div class="drawer-inner p-4">
-                                <div class="row row-gap-3">
-                                    <div class="col-lg-4">
-                                        <div class="transp-box">
-                                            <a href="<?= ROOT_URL ?>plan_details.php?id=1" class="d-flex gap-3 align-items-center">
-                                                <div>
-                                                    <img src="img/ic-1.svg" alt="">
-                                                </div>
-                                                <div class="text-brand">SHAPE UP</div>
-                                            </a>
+                                <div class="container">
+                                    <div class="row row-gap-3">
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>plan_details.php?id=1"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-m1.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">SHAPE UP</div>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="transp-box">
-                                             <a href="<?= ROOT_URL ?>plan_details.php?id=10" class="d-flex gap-3 align-items-center">
-                                                <div>
-                                                    <img src="img/ic-2.svg" alt="">
-                                                </div>
-                                                <div class="text-brand">KETO BYTE</div>
-                                            </a>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>plan_details.php?id=10"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-m2.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">KETO BYTE</div>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="transp-box">
-                                            <a href="<?= ROOT_URL ?>plan_details.php?id=3" class="d-flex gap-3 align-items-center">
-                                                <div>
-                                                    <img src="img/ic-3.svg" alt="">
-                                                </div>
-                                                <div class="text-brand">BULK UP</div>
-                                            </a>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>plan_details.php?id=3"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-m3.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">BULK UP</div>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="transp-box">
-                                            <a href="<?= ROOT_URL ?>plan_details.php?id=9" class="d-flex gap-3 align-items-center">
-                                                <div>
-                                                    <img src="img/ic-4.svg" alt="">
-                                                </div>
-                                                <div class="text-brand">V Lite</div>
-                                            </a>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>plan_details.php?id=9"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-m4.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">V Lite</div>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="transp-box">
-                                            <a href="<?= ROOT_URL ?>plan_details.php?id=11" class="d-flex gap-3 align-items-center">
-                                                <div>
-                                                    <img src="img/ic-5.svg" alt="">
-                                                </div>
-                                                <div class="text-brand">EnergizeHER</div>
-                                            </a>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>plan_details.php?id=11"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-m5.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">EnergizeHER</div>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="transp-box">
-                                             <a href="<?= ROOT_URL ?>plan_details.php?id=12" class="d-flex gap-3 align-items-center">
-                                                <div>
-                                                    <img src="img/ic-6.svg" alt="">
-                                                </div>
-                                                <div class="text-brand">MED Lite</div>
-                                            </a>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>plan_details.php?id=12"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-m6.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">MED Lite</div>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="transp-box">
-                                            <a href="<?= ROOT_URL ?>plan_details.php?id=13" class="d-flex gap-3 align-items-center">
-                                                <div>
-                                                    <img src="img/ic-7.svg" alt="">
-                                                </div>
-                                                <div class="text-brand">MUMZ Fuel</div>
-                                            </a>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>plan_details.php?id=13"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-m7.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">MUMZ Fuel</div>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="transp-box">
-                                            <a href="<?= ROOT_URL ?>plan_details.php?id=14" class="d-flex gap-3 align-items-center">
-                                                <div>
-                                                    <img src="img/ic-8.svg" alt="">
-                                                </div>
-                                                <div class="text-brand">LIL TOTS</div>
-                                            </a>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>plan_details.php?id=14"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-m8.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">LIL TOTS</div>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                        <div class="transp-box">
-                                            <a href="<?= ROOT_URL ?>plan_details.php?id=10" class="d-flex gap-3 align-items-center">
-                                                <div>
-                                                    <img src="img/ic-9.svg" alt="">
-                                                </div>
-                                                <div class="text-brand">B FIT</div>
-                                            </a>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>plan_details.php?id=10"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-m9.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">B FIT</div>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-lg-12 d-flex justify-content-end">
-                                        <a href="<?= ROOT_URL ?>meal_plans.php" class="text-brand">View all Meal
-                                            Plans&nbsp;<i class="ti ti-arrow-narrow-right"></i></a>
+                                        <div class="col-lg-12 d-flex justify-content-end">
+                                            <a href="<?= ROOT_URL ?>meal_plans.php" class="text-brand">View all Meal
+                                                Plans&nbsp;<i class="ti ti-arrow-narrow-right"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <a href="<?= ROOT_URL ?>our_services.php"
+                            class="drawer-trigger position-relative d-flex align-items-center h-100">Our
+                            Services&nbsp;<i class="ti ti-chevron-down fs-5"></i></a>
+                        <div class="drawer">
+                            <div class="drawer-inner p-4">
+                                <div class="container">
+                                    <div class="row row-gap-3">
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>service_details.php?id=3"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/s1.webp" alt="">
+                                                    </div>
+                                                    <div class="text-brand">Dietary Consultation</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>service_details.php?id=4"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/s2.webp" alt="">
+                                                    </div>
+                                                    <div class="text-brand">Corporate Wellness Program</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>service_details.php?id=5"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/s3.webp" alt="">
+                                                    </div>
+                                                    <div class="text-brand">Slimming Services — Exclusive at Blite Abu
+                                                        Dhabi</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>service_details.php?id=6"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/s4.webp" alt="">
+                                                    </div>
+                                                    <div class="text-brand">Healthy Catering Services for Your Events
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12 d-flex justify-content-end">
+                                            <a href="<?= ROOT_URL ?>our_services.php" class="text-brand">View all
+                                                Services&nbsp;<i class="ti ti-arrow-narrow-right"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="<?= ROOT_URL ?>about.php"
+                            class="drawer-trigger position-relative d-flex align-items-center h-100">About Us&nbsp;<i
+                                class="ti ti-chevron-down fs-5"></i></a>
+                        <div class="drawer">
+                            <div class="drawer-inner p-4">
+                                <div class="container">
+                                    <div class="row row-gap-3">
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>about.php#woh-we-are" class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-a4.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">Who we are</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>about.php#team"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-a1.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">Our licensed dietitians</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>about.php#why-choose-blight"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-a3.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">Why Choose us</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>about.php#our-menu"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-a2.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">Our Menu</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>about.php#our-menu"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-a2.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">Certifications</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>about.php#our-menu"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-a2.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">Testimonials</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>about.php#our-menu"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-a2.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">Locations</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="transp-box">
+                                                <a href="<?= ROOT_URL ?>about.php#our-menu"
+                                                    class="d-flex gap-3 align-items-center">
+                                                    <div>
+                                                        <img src="img/ic-a2.svg" alt="">
+                                                    </div>
+                                                    <div class="text-brand">Reviews</div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="<?= ROOT_URL ?>contact.php">Contact Us</a>
                     </div>
-                    <a href="<?= ROOT_URL ?>our_services.php">Our Services</a>
-                    <a href="<?= ROOT_URL ?>about.php">About Us</a>
-                    <a href="<?= ROOT_URL ?>contact.php">Contact Us</a>
                 </div>
             </div>
             <div class="d-none d-lg-block">
                 <?php if (!isset($_SESSION['user'])) { ?>
                     <div class="d-flex align-items-center gap-2">
-                        <a href="tel:800-4387546" class="text-white fs-4"><i class="ti ti-phone"></i></a>
-                        <a href="<?= ROOT_URL ?>login.php" class="fs- px-3 text-white">Login</a>
+                        <a href="tel:800-4387546" class="text-white fs-6 d-flex gap-2 align-items-center"><i
+                                class="ti ti-phone"></i> 800 GETSLIM</a>
+                        <a href="<?= ROOT_URL ?>login.php" class="fs-5 px-3 text-white">Login</a>
                         <a href="<?= ROOT_URL ?>signup.php" class="btn-first">Sign Up</a>
                     </div>
                 <?php } else { ?>

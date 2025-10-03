@@ -209,7 +209,6 @@ while ($row = $query->fetch_assoc()) {
     const cards = Array.from(document.querySelectorAll('.product-card'));
 
     let currentIndex = 0;
-    let autoSlideInterval;
 
     // function to show a card’s data with fade
     function showCardData(card) {
@@ -228,30 +227,20 @@ while ($row = $query->fetch_assoc()) {
         }, 400); // match CSS transition time
     }
 
-    // auto slide
-    function startAutoSlide() {
-        autoSlideInterval = setInterval(() => {
-            currentIndex = (currentIndex + 1) % cards.length;
-            showCardData(cards[currentIndex]);
-        }, 5000); // 5 seconds per slide
-    }
-
-    function stopAutoSlide() {
-        clearInterval(autoSlideInterval);
-    }
-
-    // manual click overrides auto
+    // manual click only
     cards.forEach((card, index) => {
         card.addEventListener('click', () => {
-            stopAutoSlide();
             currentIndex = index;
             showCardData(card);
         });
     });
 
-    // start slider
-    startAutoSlide();
+    // initialize with the first card
+    if (cards.length > 0) {
+        showCardData(cards[0]);
+    }
 </script>
+
 
 <script>
     // Wait 3 seconds, then hide the div
@@ -264,38 +253,37 @@ while ($row = $query->fetch_assoc()) {
   $(function () {
     function setupDrawer(triggerSelector, drawerSelector) {
       const $trigger = $(triggerSelector);
-      const $drawer = $trigger.next(drawerSelector);
 
-      $drawer.hide();
+      $trigger.each(function () {
+        const $this = $(this);
+        const $drawer = $this.next(drawerSelector);
 
-      $trigger.on('click', function (e) {
-        e.preventDefault();
-        const $this = $(this); // the clicked trigger
-        const $thisDrawer = $this.next(drawerSelector);
+        $drawer.hide();
 
-        // toggle this drawer
-        $thisDrawer.stop(true, true).slideToggle(200);
+        // open drawer on hover
+        $this.on("mouseenter", function () {
+          $drawer.stop(true, true).slideDown(200);
+          $this.addClass("active");
+        });
 
-        // toggle active class on this trigger
-        $this.toggleClass("active");
-      });
-
-      // click outside closes drawer
-      $(document).on('click', function (e) {
-        if (
-          !$trigger.is(e.target) &&
-          !$drawer.is(e.target) &&
-          $drawer.has(e.target).length === 0
-        ) {
-          $drawer.slideUp(200);
-          $trigger.removeClass("active"); // remove active class when closed
-        }
+        // handle leaving trigger or drawer
+        $this.add($drawer).on("mouseleave", function () {
+          setTimeout(function () {
+            if (!$this.is(":hover") && !$drawer.is(":hover")) {
+              $drawer.stop(true, true).slideUp(200);
+              $this.removeClass("active");
+            }
+          }, 150); // delay prevents flicker when moving between trigger and drawer
+        });
       });
     }
 
-    setupDrawer('.drawer-trigger', '.drawer');
+    setupDrawer(".drawer-trigger", ".drawer");
   });
 </script>
+
+
+
 
 
 </body>

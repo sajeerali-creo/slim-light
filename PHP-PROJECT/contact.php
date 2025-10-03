@@ -139,6 +139,17 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "contactform") {
                             <?php endif; ?>
                         </div>
                         <div class="col-lg-12 mb-4">
+                            <label for="">Select Dietitian</label>
+                            <select class="form-select form-control w-100">
+                                <option value="">Kiram El Tbayli</option>
+                                <option value="">Marisa Bousaba</option>
+                                <option value="">Mireille Ahmad</option>
+                                <option value="">Clinical Dietitian</option>
+                                <option value="">Sara Obeid</option>
+                                <option value="">Eman Baker</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-12 mb-4">
                             <label for="">Write your message</label>
                             <textarea class="min-height form-control" name="Message"
                                 id="Message"><?= $Message ?? '' ?></textarea>

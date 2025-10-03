@@ -20,8 +20,8 @@ $query = mysqli_query($connection, "select * from services");
                 <div class="row">
                     <div class="col-lg-7 mb-4">
                         <div class="service-hero-card">
-                            <h3 class="text-lime mb-4 h2">Our <span class="font-weight-200">Services</span></h3>
-                            <p class="paragraph text-lime opacity-50">From personalized meal plans and expert dietary consultations to
+                            <h3 class="mb-4 h2 text-white">Our <span class="font-weight-200 text-white">Services</span></h3>
+                            <p class="paragraph text-white opacity-50">From personalized meal plans and expert dietary consultations to
                                 corporate
                                 wellness
                                 programs and
